@@ -7,7 +7,7 @@
     -> Delivery Man
 
 # Progress
-   (MM/DD/YY)
+   (MM/DD/YY)<br>
     8/26/25 | 12:16 AM -> Login Almost Complete
                                 -> Only need the password validation when DB is connected
 
