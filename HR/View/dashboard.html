@@ -11,56 +11,52 @@
     <div class="container">
         <!-- Top left -->
         <header>
-            <div class = "top">
-                <div class = "logo">
+            <div class="top">
+                <div class="logo">
                     <h2>Hello, HR!</h2>
-                </div>
-                
-                <div class = "close">
-                    <span class="material-symbols-outlined"> close </span>
                 </div>
             </div>
 
             <!-- left panel option bar -->
-             <div class = "sidebar">
-                <a href = "#" class = "active">
-                    <span class = "material-symbols-outlined">grid_view</span>
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
 
-                <a href = "#">
-                    <span class = "material-symbols-outlined">person</span>
+                <a href="#">
+                    <span class="material-symbols-outlined">person</span>
                     <h3>Profile</h3>
                 </a>
 
-                <a href = "#">
-                    <span class = "material-symbols-outlined">article_person</span>
+                <a href="#">
+                    <span class="material-symbols-outlined">article_person</span>
                     <h3>Employee Information</h3>
                 </a>
 
-                <a href = "#">
-                    <span class = "material-symbols-outlined">person_add_disabled</span>
+                <a href="#">
+                    <span class="material-symbols-outlined">person_add_disabled</span>
                     <h3>Add/Remove Employee</h3>
                 </a>
 
-                <a href = "#">
-                    <span class = "material-symbols-outlined">assessment</span>
+                <a href="#">
+                    <span class="material-symbols-outlined">assessment</span>
                     <h3>Product Delivery Report</h3>
                 </a>
 
-                <a href = "#">
-                    <span class = "material-symbols-outlined">event</span>
+                <a href="#">
+                    <span class="material-symbols-outlined">event</span>
                     <h3>Leave Management</h3>
-                    <span class = "mgs_count">5</span>
+                    <span class="mgs_count">5</span>
                 </a>
 
-                <a href = "#">
-                    <span class = "material-symbols-outlined">cast_for_education</span>
+                <a href="#">
+                    <span class="material-symbols-outlined">cast_for_education</span>
                     <h3>Training & Development</h3>
                 </a>
 
-                <a href = "#">
-                    <span class = "material-symbols-outlined">logout</span>
+                <a href="#">
+                    <span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
                 </a>
             </div>
@@ -69,22 +65,121 @@
 
         <!-- Top center -->
         <main>
-            <div class = "center">
-                <div class = "top">
-                    <h2>Dashboard Overview</h2>
+            <div class="center">
+                <div class="top">
+                    <h1>Dashboard</h1>
+
+                    <!-- Date Selection search -->
+                    <div class="date">
+                        <input type="date">
+                    </div>
+
+                    <!-- Middle Left Growth flow -->
+                    <div class="insights">
+                        <div class="sales">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            <div class="middle">
+                                <div class="left">
+                                    <h3>Total Sales</h3>
+                                    <h1>$21,050</h1>
+                                </div>
+                                <div class="progress">
+                                    <svg>
+                                        <circle r="30" cy="40" cx="40"></circle>
+                                    </svg>
+                                    <div class="number">76%</div>
+                                </div>
+                            </div>
+                            <small>Last 24 Hours</small>
+                        </div>
+
+                        <!-- Middle center Attendance sheet -->
+                        <div class="attendance">
+                            <span class="material-symbols-outlined">dataset</span>
+                            <div class="middle">
+                                <div class="left">
+                                    <h3>Employee Attendance</h3>
+                                    <h1>173</h1>
+                                </div>
+                                <div class="progress">
+                                    <svg>
+                                        <circle r="30" cy="40" cx="40"></circle>
+                                    </svg>
+                                    <div class="number">95%</div>
+                                </div>
+                            </div>
+                            <small>Today</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary DB -->
+
+                <div class = "recent-orders">
+                    <h1><br>Recent Trendings</h1>
+
+                    <table>
+                        <thead>
+                        <tr>
+                            <td><b>Product Name</b></td>
+                            <td><b>Product Code</b></td>
+                            <td><b>Product Price</b></td>
+                            <td><b>Product Status</b></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Demons Layer T-shirt</td>
+                                <td>DLT-249</td>
+                                <td>$19.99</td>
+                                <td class = "primary">In Stock</td>
+                            </tr>
+                            <tr>
+                                <td>Samsung Galaxy S25 Ultra</td>
+                                <td>SGS25U-512</td>
+                                <td>$1,199.99</td>
+                                <td class = "primary">In Stock</td>
+                            </tr>
+                            <tr>
+                                <td>iPhone 14 Pro Max</td>
+                                <td>IP14PM-256</td>
+                                <td>$1,099.99</td>
+                                <td class = "primary">In Stock</td>
+                            </tr>
+                            <tr>
+                                <td>Redmi Note 14 Pro</td>
+                                <td>RN14P-256</td>
+                                <td>$899.99</td>
+                                <td class = "warning">Out of Stock</td>
+                            </tr>
+                            <tr>
+                                <td>ASUS ROG Zephyrus G15 GA503RM Ryzen 7 6800HS Gaming Laptop</td>
+                                <td>GA503RM-6800HS</td>
+                                <td>$2,499.99</td>
+                                <td class = "primary">In Stock</td>
+                            </tr>
+                            <tr>
+                                <td>Lenovo LOQ 15IAX9 (83GS006LLK)</td>
+                                <td>LOQ15IAX9</td>
+                                <td>$1,199.99</td>
+                                <td class = "warning">Out of Stock</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </main>
 
         <!-- Top right -->
-         <div class = "right">
-            <div class = "top">
-                <button id = "profile">
-                    <span class = "material-symbols-outlined">profile</span>
+        <div class="right">
+            <div class="top">
+                <button id="profile">
+                    <span class="material-symbols-outlined">profile</span>
                 </button>
             </div>
         </div>
-                
+
     </div>
 </body>
+
 </html>
