@@ -12,7 +12,7 @@
                //if($pass == ){}
 
             }else if(preg_match("/^[a-zA-Z0-9._]+@(accountant\.com)$/",$mail)){
-                header("Location: ../../Accountant/View/home.php");
+                header("Location: ../../Accountant/View/AccountantDashboard.php");
                 //if($pass == ){}
             }else if(preg_match("/^[a-zA-Z0-9._]+@(hr\.com)$/",$mail)){
                 header("Location: ../../HR/View/home.php");
