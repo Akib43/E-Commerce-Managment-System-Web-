@@ -5,19 +5,21 @@
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script src="../JS/AccountantDashBoard.js" defer></script>
         <link rel="stylesheet" href="../CSS/AccountantDashBoard.css">
-
     </head>
 
     <body>
         <div class= "Sidebar">
+
+            <img src="../Assets/Image/AccountantDashBoardLogo.png" alt="Accountant" style="width:50%; height:auto;">
+
             <h2>Accountant</h2>
             <a href="AccountantDashBoard.php" class="active">Dashboard</a>
-            <a href="AccountantProfile.php">Product Sales</a>
-            <a href="AccountantViewOrders.php">Orders</a>
-            <a href="AccountantViewPayments.php">Payments & Invoice</a>
-            <a href="AccountantManageExpenses.php">Expenses</a>
-            <a href="AccountantManageInvoices.php">Company Salary</a>
-            <a href="../LoginPage.php">Logout</a>
+            <a href="ProductSales.php">Product Sales</a>
+            <a href="OrdersReport.php">Orders</a>
+            <a href="Payment_Invoice.php">Payments & Invoice</a>
+            <a href="CompanyExpense.php">Expenses</a>
+            <a href="CompanySalary.php">Company Salary</a>
+            <a href="../../LoginPage.php">Logout</a>
 
         </div>
         

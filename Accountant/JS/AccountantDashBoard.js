@@ -1,5 +1,5 @@
 const ylabel = ["ELectronics", "Groceries", "Accessories", "Clothes", "Footwear"];
-const xlabel = [5000, 3000, 2000, 1000, 500];
+const xlabel = [4000, 3000, 2000, 1000, 500];
 
 const data = [
     {
@@ -14,7 +14,7 @@ const data = [
 const layout = {
     title: 'Product Catagory-wise Profit',
     xaxis: { title: 'Profit in BDT' },
-    yaxis: { title: 'Product Category' },
+    yaxis: { title: 'Product Categorys' },
     margin: { l: 100, r: 20, t: 50, b: 50 }
 };
 
