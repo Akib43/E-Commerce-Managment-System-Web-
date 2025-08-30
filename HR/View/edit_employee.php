@@ -69,7 +69,7 @@
                 <div class="top">
                     <h1>Edit Employee Informations</h1>
                     
-                    <!-- Profile Information -->
+                    <!-- add/remove employee db connection -->
                     
                 </div>
             </div>
