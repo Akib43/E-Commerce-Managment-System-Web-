@@ -4,7 +4,7 @@
         <title>Product Sales</title>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="../JS/OrdersReport.js " defer></script>
-        <link rel="stylesheet" href="../CSS/OrdersReport.css">
+        <link rel="Stylesheet" href="../CSS/OrdersReport.css">
 
     </head>
     <body>
@@ -25,32 +25,32 @@
 
         <div class = "pagecontainer">
             
-            <div class="counts">
                 <div class="totalammount">
-                    <h4>Total Orders</h4>
-                    <h1 id="totalorder"></h1>
-                </div>
-                <div class="totalammount">
-                    <h4>Total Orders</h4>
-                    <h1 id="totalorder"></h1>
+                    <h4>Orders</h4>
+                    <div class="Line"></div>
+                    <h1 id="totalorder">N\A</h1>
                 </div>
 
                 <div class="totalammount">
-                    <h4>Total Orders</h4>
-                    <h1 id="totalorder"></h1>
+                    <h4>Order Pending</h4>
+                    <div class="Line"></div>
+                    <h1 id="totalpending">N\A</h1>
+                </div>
+
+                <div class="totalammount">
+                    <h4>Orders Delivered</h4>
+                    <div class="Line"></div>
+                    <h1 id="totaldelivered">N\A</h1>
                 </div>
 
                 <div class="totalammount">
                     <h4>Total Orders</h4>
-                    <h1 id="totalorder"></h1>
+                    <div class="Line"></div>
+                    <h1 id="">N\A</h1>
                 </div>
 
-            </div>
-
-            <div class="tables">
-
-                <div class="ordertable">
-                    <table>
+                <div class="tablecss">
+                    <table id ="ordertable">
                         <tr>
                             <th>Order ID</th>
                         </tr>
@@ -60,15 +60,19 @@
                     </table>
                 </div>
 
-    
-
-
-            </div>
-            
+                <div class="tablecss">
+                    <table id ="Producttable">
+                        <tr>
+                            <th>Product ID</th>
+                        </tr>
+                        <tr>
+                            <td>32476</td>
+                        </tr>
+                    </table>
+                </div>
 
 
         </div>
         
-
     </body>
 </html>
