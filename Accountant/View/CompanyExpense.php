@@ -2,9 +2,8 @@
 <html>
     <head>
         <title>Product Sales</title>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="../JS/CompanySalary.js " defer></script>
-        <link rel="stylesheet" href="../CSS/CompanySalary.css">
+        <script src="../JS/CompanyExpense.js "></script>
+        <link rel="stylesheet" href="../CSS/CompanyExpense.css">
 
     </head>
     <body>
@@ -65,25 +64,25 @@
                             <option>HR</option>
                         </select>
                         <br>
-                        <input type="text" id="productreason" placeholder="Reason for purchase"/>
+                        <input type="text" id="productreason" style = "height: 80px;"placeholder="Reason for purchase"/>
                         <br>
                         <label>Approve Date</label><br>
                         <input type="date" id="ApDate">
                         <br>
                         <input type="text" id="Approvedby" placeholder="Approved by">
-
+                        <input type="submit" value="Submit">
                     </form>
 
                 </div>
 
-               <div class="=frm">
+               <div class="frm">
                     <form>
                         <h1>Purchase Info</h1><br>
                         <input type="number" id="ExpenseId" placeholder="ExpenseID"><br>
                         <label>Purchase Date</label><br>
                         <input type="date" id="Purchasedate"><br>
+                        <input type="submit" value="Submit">
                     </form>
-
                </div> 
 
                 
