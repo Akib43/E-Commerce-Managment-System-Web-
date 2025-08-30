@@ -1,0 +1,14 @@
+// dashboard view day/night mode
+
+const themeToggler = document.querySelector('.theme');
+
+themeToggler.addEventListener('click', () => {
+    
+    document.body.classList.toggle('dark');
+
+    themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
+    themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
+
+});
+
+//
