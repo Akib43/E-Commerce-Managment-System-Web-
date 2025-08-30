@@ -68,9 +68,9 @@
             <div class="center">
                 <div class="top">
                     <h1>Employee Informations</h1>
-                    
-                    <!-- Employee Information list -->
-                    
+
+                    <!-- Employee Information list without db connection -->
+
                 </div>
             </div>
         </main>
