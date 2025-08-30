@@ -69,7 +69,7 @@
                 <div class="top">
                     <h1>Employee Informations</h1>
                     
-                    <!-- Profile Information -->
+                    <!-- Employee Information list -->
                     
                 </div>
             </div>
