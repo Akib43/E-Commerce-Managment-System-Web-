@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Product Sales</title>
-        <script src="../JS/CompanyExpense.js "></script>
+        <script src="../JS/CompanyExpense.js"></script>
         <link rel="stylesheet" href="../CSS/CompanyExpense.css">
 
     </head>
@@ -25,7 +25,7 @@
         <div class = "pagecontainer">
             
             <div class="tablebox">
-                <table>
+                <table id="expenseTable">
                     <tr >
                         <th>Expense ID</th>
                         <th>Product Name</th>
@@ -35,16 +35,6 @@
                         <th>Apperove</th>
                         <th>Approved by</th>
                         <th>Purchase date</th>
-                    </tr>
-                    <tr>
-                        <td>002</td>
-                        <td>Ink</td>
-                        <td>300BDT</td>
-                        <td>Accounts</td>
-                        <td>Empty</td>
-                        <td>2024-01-31</td>
-                        <td>Akib Ashfaq</td>
-                        <td>2024-01-31</td>
                     </tr>
                 </table>
 
@@ -59,20 +49,19 @@
                         <input type="number" id ="productprice" placeholder="Price"/>
                         <br>
                         <select id="Depertment">
-                            <option>---Select Department---</option>
-                            <option>Accounts</option>
-                            <option>HR</option>
+                            <option value="">---Select Department---</option>
+                            <option value="Accounts">Accounts</option>
+                            <option Value="HR">HR</option>
                         </select>
                         <br>
-                        <input type="text" id="productreason" style = "height: 80px;"placeholder="Reason for purchase"/>
+                        <textarea id="productreason" placeholder="Reason for purchase"></textarea>
                         <br>
                         <label>Approve Date</label><br>
                         <input type="date" id="ApDate">
                         <br>
                         <input type="text" id="Approvedby" placeholder="Approved by">
-                        <input type="submit" value="Submit">
                     </form>
-
+                    <button onclick="ApproveValid()">Approve</button>
                 </div>
 
                <div class="frm">
