@@ -79,7 +79,7 @@ div.frm{
     align-items: center;
 }
 
-input, select {
+#productreason, input, select, button {
     width: 300px;
     height: 40px;
     margin: 10px;
