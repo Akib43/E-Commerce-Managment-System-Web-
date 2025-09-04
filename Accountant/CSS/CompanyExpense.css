@@ -47,7 +47,6 @@ a{
     background-color: whitesmoke;
 }
 
-
 th, td{
    border: 1px solid black;
 }
@@ -75,7 +74,7 @@ div.frm{
     margin-bottom: 40px;
     padding: 20px;
     border: 1px solid black;
-    background-color: lightgray;
+    background-color: whitesmoke;
     align-items: center;
 }
 
@@ -85,8 +84,10 @@ div.frm{
     margin: 10px;
     padding: 20px, 5px, 20px, 5px;
     border: 1px solid black;
+    border-radius: 10px;
 }
 
 label,h1{
     margin: 10px;
 }
+
