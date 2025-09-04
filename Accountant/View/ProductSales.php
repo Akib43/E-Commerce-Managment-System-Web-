@@ -16,7 +16,7 @@
             <a href="AccountantDashBoard.php" class="active">Dashboard</a>
             <a href="ProductSales.php">Product Sales</a>
             <a href="OrdersReport.php">Orders</a>
-            <a href="Payment_Invoice.php">Payments & Invoice</a>
+            <a href="Invoice.php">Invoice</a>
             <a href="CompanyExpense.php">Expenses</a>
             <a href="CompanySalary.php">Company Salary</a>
             <a href="../../LoginPage.php">Logout</a>
