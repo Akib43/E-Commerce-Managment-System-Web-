@@ -30,39 +30,30 @@
                     <tr >
                         <th>Employee ID</th>
                         <th>Employee Name</th>
-                        <th>Position</th>
-                        <th>Salary</th>
-                        <th>Increment</th>
-                        <th>Update Date</th></th>
+                        <th>Employee Department</th>
+                        <th>Employee Salary</th>
+                        <th>Employee Increment Percentage</th>
+                        <th>Employee Incremented Salary</th>
+                        <th>Employee PayDate</th></th>
                     </tr>
 
-                    <tr>
-                        <td>001</td>
-                        <td>John Doe</td>
-                        <td>Manager</td>
-                        <td>$5000</td>
-                        <td>5%</td>
-                        <td>2024-01-31</td>
-                    </tr>
-                    
                 </table>
             </div>
 
             <div class="Inputbox">
                 
                 <div class="frm">
-                    <h2>Update Salary</h2>
-                    <input type="text" id="empId" name="empId" placeholder="Employee ID"><br><br>
-                    <input type="number" id="increment" name="increment" placeholder="Increment"><br><br>
-                    <button onclick="">Update</button>
+                    <form onsubmit="updateincrement()" action="../PHP/SalaryUpdate.php" method="POST">
+                        <h2>Update Salary</h2>
+                        <input type="text" id="empId" name="empId" placeholder="Employee ID"><br><br>
+                        <input type="number" id="increment" name="increment" placeholder="Increment"><br><br>
+                        <label>Pay Date</label></br>
+                        <input type="date" name="payday" id="increment" ><br><br>
+                        <input type="submit" value="Update">
+                    </form>
                 </div>
-
                 <div class="frm">
-                    <h2>Salary Pay</h2>
-                    <input type="text" id="empId" name="empId" placeholder="Employee ID"><br><br>
-                    <label>Pay Date</label></br>
-                    <input type="date" id="increment" name="increment"><br><br>
-                    <button onclick="">Update</button>
+
                 </div>
                 
             </div>

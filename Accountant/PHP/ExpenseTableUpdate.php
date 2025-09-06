@@ -3,7 +3,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "e-commerce-managment-db";
+    $dbname = "e-commerce-managment-system";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -24,6 +24,14 @@
         
         echo $ename . $eprice . $edept . $ereason . $eapdate . $eapby . $ercdate .$ercby;
 
+        $sql = "INSERT INTO expense_table  (Expense_Name, Expense_Ammount, Allocated_Department, Expense_Reason, Expense_Approved_Date, Expense_Approved_By, Expense_Received_Date, Expense_Received_By) VALUES ('$ename', '$eprice', '$edept', '$ereason', '$eapdate', '$eapby', '$ercdate', '$ercby')";
+
+        if($conn -> query($sql) === TRUE){
+            echo "<script>alert('Updated');</script>";
+        }
+        else{
+            echo "Error: ". $sql . "<br>" . $conn -> error;
+        }
     }
 
 ?>
