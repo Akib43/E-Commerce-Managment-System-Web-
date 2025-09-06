@@ -15,31 +15,36 @@ function ApproveValid(){
     }else{
         alert("Dom");
 
+        
+        alert("Dom 3");
+
+    }
+    }
+
+    function tableview(eID, ename, ammount, edept, ereason, apdate, apname, rcdate, rcname){
+
         var tbl = document.getElementById("expenseTable");
 
         var row = document.createElement("tr");
         row.innerHTML=`
-            <td>2222</td>
-            <td>${pname}</td>
-            <td>${price}</td>
-            <td>${dept}</td>
-            <td>${reason}</td>
-            <td>${adate}</td>
+            <td>${eID}</td>
+            <td>${ename}</td>
+            <td>${ammount}</td>
+            <td>${edept}</td>
+            <td>${ereason}</td>
+            <td>${apdate}</td>
             <td>${apname}</td>
+            <td>${rcdate}</td>
+            <td>${rcname}</td>
         `;
 
         tbl.appendChild(row);
 
         row.addEventListener("click", () => {
-            alert("Adding to alert");
+        alert("Adding to alert");
 
         });
 
-        alert("Dom 3");
-
     }
-}
-
-
 
 

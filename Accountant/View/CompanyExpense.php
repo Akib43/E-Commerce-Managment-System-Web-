@@ -37,43 +37,35 @@
                         <th>Purchase date</th>
                     </tr>
                 </table>
-
             </div>
 
             <div class="Inputbox">
                 <div class="frm">
                     <h1>Approve Expense</h1>
-                    <form>
-                        <input type="text" id="productname" placeholder="Product Name"/>
+                    <form onsubmit="ApproveValid()" method="POST" action="../PHP/ExpenseTableUpdate.php">
+                        <input type="text" name ="expensename" id="productname" placeholder="Product Name"/>
                         <br>
-                        <input type="number" id ="productprice" placeholder="Price"/>
+                        <input type="number" name="expenseammount" id ="productprice" placeholder="Price"/>
                         <br>
-                        <select id="Depertment">
-                            <option value="">---Select Department---</option>
+                        <select name="department" id="Depertment">
+                            <option value="">Select Department</option>
                             <option value="Accounts">Accounts</option>
                             <option Value="HR">HR</option>
                         </select>
                         <br>
-                        <textarea id="productreason" placeholder="Reason for purchase"></textarea>
+                        <textarea name="expensereason" id="productreason" placeholder="Reason for purchase"></textarea>
                         <br>
                         <label>Approve Date</label><br>
-                        <input type="date" id="ApDate">
+                        <input type="date" name="approvedate" id="ApDate">
+                        
                         <br>
-                        <input type="text" id="Approvedby" placeholder="Approved by">
+                        <input type="text" name="approvedby" id="Approvedby" placeholder="Approved by">
+                        <input type="date" name="receiveddate" id="receiveddate">
+                        <input type="text" name="receivedby" id="receivedby" placeholder="Approved by">
+                        <input type="submit">
                     </form>
                     <button onclick="ApproveValid()">Approve</button>
                 </div>
-
-               <div class="frm">
-                    <form>
-                        <h1>Purchase Info</h1><br>
-                        <input type="number" id="ExpenseId" placeholder="ExpenseID"><br>
-                        <label>Purchase Date</label><br>
-                        <input type="date" id="Purchasedate"><br>
-                        <input type="submit" value="Submit">
-                    </form>
-               </div> 
-                
             </div>
             
         </div>

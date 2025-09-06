@@ -62,14 +62,24 @@ tr:hover{
     flex-wrap: wrap;
 }
 
-input, select, button {
-    width: 300px;
-    height: 40px;
+input, select{
+    width: 270px;
+    height: 30px;
     margin: 10px;
-    padding: 20px, 5px, 20px, 5px;
+    padding: 10px 15px;
     border: 1px solid black;
     border-radius: 10px;
 }
+
+button{
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
 
 label, h2{
     margin: 10px;
