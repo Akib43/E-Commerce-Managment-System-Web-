@@ -1,0 +1,3 @@
+# Expense Table
+
+CREATE TABLE `e-commerce-managment-system`.`expense_table` (`Expense_ID` INT NOT NULL AUTO_INCREMENT , `Expense_Name` VARCHAR(30) NOT NULL , `Expense_Ammount` FLOAT NOT NULL , `Allocated_Department` VARCHAR(20) NOT NULL , `Expense_Reason` VARCHAR(250) NOT NULL , `Expense_Approved_Date` DATE NOT NULL , `Expense_Approved_By` VARCHAR(30) NOT NULL , `Expense_Received_Date` DATE NOT NULL , `Expense_Received_By` VARCHAR(30) NOT NULL , PRIMARY KEY (`Expense_ID`)) ENGINE = InnoDB;

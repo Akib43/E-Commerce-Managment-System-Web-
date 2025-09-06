@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Product Sales</title>
-        <script src="../JS/CompanyExpense.js "></script>
+        <script src="../JS/CompanyExpense.js"></script>
         <link rel="stylesheet" href="../CSS/CompanyExpense.css">
 
     </head>
@@ -15,7 +15,7 @@
             <a href="AccountantDashBoard.php" class="active">Dashboard</a>
             <a href="ProductSales.php">Product Sales</a>
             <a href="OrdersReport.php">Orders</a>
-            <a href="Payment_Invoice.php">Payments & Invoice</a>
+            <a href="Invoice.php">Invoice</a>
             <a href="CompanyExpense.php">Expenses</a>
             <a href="CompanySalary.php">Company Salary</a>
             <a href="../../LoginPage.php">Logout</a>
@@ -25,7 +25,7 @@
         <div class = "pagecontainer">
             
             <div class="tablebox">
-                <table>
+                <table id="expenseTable">
                     <tr >
                         <th>Expense ID</th>
                         <th>Product Name</th>
@@ -36,56 +36,36 @@
                         <th>Approved by</th>
                         <th>Purchase date</th>
                     </tr>
-                    <tr>
-                        <td>002</td>
-                        <td>Ink</td>
-                        <td>300BDT</td>
-                        <td>Accounts</td>
-                        <td>Empty</td>
-                        <td>2024-01-31</td>
-                        <td>Akib Ashfaq</td>
-                        <td>2024-01-31</td>
-                    </tr>
                 </table>
-
             </div>
 
             <div class="Inputbox">
                 <div class="frm">
                     <h1>Approve Expense</h1>
-                    <form>
-                        <input type="text" id="productname" placeholder="Product Name"/>
+                    <form onsubmit="ApproveValid()" method="POST" action="../PHP/ExpenseTableUpdate.php">
+                        <input type="text" name ="expensename" id="productname" placeholder="Product Name"/>
                         <br>
-                        <input type="number" id ="productprice" placeholder="Price"/>
+                        <input type="number" name="expenseammount" id ="productprice" placeholder="Price"/>
                         <br>
-                        <select id="Depertment">
-                            <option>---Select Department---</option>
-                            <option>Accounts</option>
-                            <option>HR</option>
+                        <select name="department" id="Depertment">
+                            <option value="">Select Department</option>
+                            <option value="Accounts">Accounts</option>
+                            <option Value="HR">HR</option>
                         </select>
                         <br>
-                        <input type="text" id="productreason" style = "height: 80px;"placeholder="Reason for purchase"/>
+                        <textarea name="expensereason" id="productreason" placeholder="Reason for purchase"></textarea>
                         <br>
                         <label>Approve Date</label><br>
-                        <input type="date" id="ApDate">
+                        <input type="date" name="approvedate" id="ApDate">
+                        
                         <br>
-                        <input type="text" id="Approvedby" placeholder="Approved by">
-                        <input type="submit" value="Submit">
+                        <input type="text" name="approvedby" id="Approvedby" placeholder="Approved by">
+                        <input type="date" name="receiveddate" id="receiveddate">
+                        <input type="text" name="receivedby" id="receivedby" placeholder="Approved by">
+                        <input type="submit">
                     </form>
-
+                    <button onclick="ApproveValid()">Approve</button>
                 </div>
-
-               <div class="frm">
-                    <form>
-                        <h1>Purchase Info</h1><br>
-                        <input type="number" id="ExpenseId" placeholder="ExpenseID"><br>
-                        <label>Purchase Date</label><br>
-                        <input type="date" id="Purchasedate"><br>
-                        <input type="submit" value="Submit">
-                    </form>
-               </div> 
-
-                
             </div>
             
         </div>

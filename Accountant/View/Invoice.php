@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
+
     <head>
+
         <title>Product Sales</title>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="../JS/OrdersReport.js " defer></script>
-        <link rel="Stylesheet" href="../CSS/OrdersReport.css">
+        <script src="../JS/Invoice.js" defer></script>
+        <link rel="Stylesheet" href="../CSS/Invoice.css">
 
     </head>
+
     <body>
+
         <div class= "Sidebar">
 
             <img src="../Assets/Image/AccountantDashBoardLogo.png" alt="Accountant" style="width:50%; height:auto;">
@@ -59,18 +62,6 @@
                         </tr>
                     </table>
                 </div>
-
-                <div class="tablecss">
-                    <table id ="Producttable">
-                        <tr>
-                            <th>Product ID</th>
-                        </tr>
-                        <tr>
-                            <td>32476</td>
-                        </tr>
-                    </table>
-                </div>
-
 
         </div>
         
