@@ -52,9 +52,6 @@
                         <input type="submit" value="Update">
                     </form>
                 </div>
-                <div class="frm">
-
-                </div>
                 
             </div>
 
