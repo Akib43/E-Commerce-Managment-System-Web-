@@ -32,6 +32,7 @@ a{
 }
 
 .tablebox{
+    min-width: 800px;
     width: 65%;
     height: 100%;
     padding: 20px;
@@ -55,9 +56,12 @@ tr:hover{
 }
 
 .Inputbox{
+    min-width: 380px;
     width: 27%;
     padding: 10px;
     justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 div.frm{

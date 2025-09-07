@@ -1,3 +1,16 @@
 # Expense Table
 
-CREATE TABLE `e-commerce-managment-system`.`expense_table` (`Expense_ID` INT NOT NULL AUTO_INCREMENT , `Expense_Name` VARCHAR(30) NOT NULL , `Expense_Ammount` FLOAT NOT NULL , `Allocated_Department` VARCHAR(20) NOT NULL , `Expense_Reason` VARCHAR(250) NOT NULL , `Expense_Approved_Date` DATE NOT NULL , `Expense_Approved_By` VARCHAR(30) NOT NULL , `Expense_Received_Date` DATE NOT NULL , `Expense_Received_By` VARCHAR(30) NOT NULL , PRIMARY KEY (`Expense_ID`)) ENGINE = InnoDB;
+CREATE TABLE `e-commerce-managment-db`.`expense_table` (`Expense_ID` INT NOT NULL AUTO_INCREMENT , `Expense_Name` VARCHAR(30) NOT NULL , `Expense_Ammount` DOUBLE NOT NULL , `Allocated_Department` VARCHAR(20) NOT NULL , `Expense_Reason` VARCHAR(250) NOT NULL , `Expense_Approved_Date` DATE NOT NULL , `Expense_Approved_By` VARCHAR(30) NOT NULL , `Expense_Received_Date` DATE NOT NULL , `Expense_Received_By` VARCHAR(30) NOT NULL , PRIMARY KEY (`Expense_ID`)) ENGINE = InnoDB;
+
+
+# Salary Table
+
+CREATE TABLE `e-commerce-managment-db`.`employee_salary_table` (`Employee_ID` INT NOT NULL , `Employee_Name` VARCHAR(30) NOT NULL , `Employee_Department` VARCHAR(20) NOT NULL , `Employee_Salary` DOUBLE NOT NULL , `Employee_Salary_Increment_percentage` INT NOT NULL , `Employee_Salary_Update` DATE NOT NULL ) ENGINE = InnoDB;
+
+
+#
+
+
+
+
+
