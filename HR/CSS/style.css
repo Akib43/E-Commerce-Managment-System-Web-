@@ -215,13 +215,18 @@ main .date{
 
 /* Total sales box size */
 
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 main .insights{
     background-color: var(--clr-white);
     padding: var(--card-padding);
-    margin-top: 15px;
-    display: grid;
+    margin-top: 20px;
     grid-template-columns: 20% auto 20%;
-    gap: 10px;
+    gap: 50px;
 }
 
 /* Total sales box icon styles */
