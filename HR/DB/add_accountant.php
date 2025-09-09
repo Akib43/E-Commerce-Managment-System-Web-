@@ -1,20 +1,22 @@
 <?php
 include "config.php";
 
-if (isset($_POST["submit"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $name = $_POST["name"];
-    $email = $_POST["email"];
     $number = $_POST["number"];
+    $email = $_POST["email"];
     $password = $_POST["password"];
     $address = $_POST["address"];
     $joining = $_POST["joining"];
 
-    $sql = "INSERT INTO acc (name, email, number, password, address, joining) VALUES ('$name', '$email', '$number', '$password', '$address', '$joining')";
-    $result = mysqli_query($conn, $sql);
-    
-    if (!$result) {
-        echo "Failed: " . mysqli_error($conn);
+    $sql = "INSERT INTO ACC (Name, Number, Email, Password, Address, Joining) VALUES ('$name', '$number', '$email', '$password', '$address', '$joining')";
+
+    if ($conn->query($sql) === FALSE) {
+        echo "Failed: " . $conn->error;
     }
-    mysqli_close($conn);
+    else{
+        echo "New record created successfully";
+    }
+    $conn->close();
 }
 ?>
