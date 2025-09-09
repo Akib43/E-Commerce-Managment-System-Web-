@@ -4,9 +4,11 @@
         <title>Product Sales</title>
         <script src="../JS/CompanyExpense.js"></script>
         <link rel="stylesheet" href="../CSS/CompanyExpense.css">
+        
 
     </head>
     <body>
+        
         <div class= "Sidebar">
 
             <img src="../Assets/Image/AccountantDashBoardLogo.png" alt="Accountant" style="width:50%; height:auto;">
@@ -25,6 +27,7 @@
         <div class = "pagecontainer">
             
             <div class="tablebox">
+                <h2 style=" position: sticky;">Company Expense</h2>
                 <table id="expenseTable">
                     <tr >
                         <th>Expense ID</th>
@@ -33,16 +36,27 @@
                         <th>Department</th>
                         <th>Reason</th>
                         <th>Apperove</th>
-                        <th>Approved by</th>
-                        <th>Purchase date</th>
+                        <th>Approved By</th>
+                        <th>Payment Recived date</th>
+                        <th>Recived By</th>
                     </tr>
                 </table>
+                <?php include '../PHP/ExpenseTableShow.php';?>
+                <?php include '../PHP/ExpenseTableShow.php';?>
+                <?php include '../PHP/ExpenseTableShow.php';?>
+                <?php include '../PHP/ExpenseTableShow.php';?>
+                <?php include '../PHP/ExpenseTableShow.php';?>
+                <?php include '../PHP/ExpenseTableShow.php';?>
+                <?php include '../PHP/ExpenseTableShow.php';?>
+                <?php include '../PHP/ExpenseTableShow.php';?>
+                <?php include '../PHP/ExpenseTableShow.php';?>
             </div>
+            
 
             <div class="Inputbox">
                 <div class="frm">
                     <h1>Approve Expense</h1>
-                    <form onsubmit="ApproveValid()" method="POST" action="../PHP/ExpenseTableUpdate.php">
+                    <form onsubmit="return ApproveValid()" method="POST" action="../PHP/ExpenseTableUpdate.php">
                         <input type="text" name ="expensename" id="productname" placeholder="Product Name"/>
                         <br>
                         <input type="number" name="expenseammount" id ="productprice" placeholder="Price"/>
@@ -62,9 +76,8 @@
                         <input type="text" name="approvedby" id="Approvedby" placeholder="Approved by">
                         <input type="date" name="receiveddate" id="receiveddate">
                         <input type="text" name="receivedby" id="receivedby" placeholder="Approved by">
-                        <input type="submit">
+                        <input type="submit" Value=Submit>
                     </form>
-                    <button onclick="ApproveValid()">Approve</button>
                 </div>
             </div>
             

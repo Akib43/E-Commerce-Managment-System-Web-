@@ -1,5 +1,3 @@
-
-
 function ApproveValid(){
     
     var pname = document.getElementById("productname").value;
@@ -12,21 +10,19 @@ function ApproveValid(){
 
     if(pname == "" || isNaN(price) || dept == "" || reason == "" || adate == "" || apname == ""){
         alert("Fil the form first" );
+        return false;
     }else{
-        alert("Dom");
-
-        
-        alert("Dom 3");
-
+        return true;
     }
-    }
+    return false;
+}
 
-    function tableview(eID, ename, ammount, edept, ereason, apdate, apname, rcdate, rcname){
+function tableview(eID, ename, ammount, edept, ereason, apdate, apname, rcdate, rcname){
 
-        var tbl = document.getElementById("expenseTable");
+    var tbl = document.getElementById("expenseTable");
 
-        var row = document.createElement("tr");
-        row.innerHTML=`
+    var row = document.createElement("tr");
+    row.innerHTML=`
             <td>${eID}</td>
             <td>${ename}</td>
             <td>${ammount}</td>
@@ -36,14 +32,14 @@ function ApproveValid(){
             <td>${apname}</td>
             <td>${rcdate}</td>
             <td>${rcname}</td>
-        `;
+    `;
 
-        tbl.appendChild(row);
+    tbl.appendChild(row);
 
-        row.addEventListener("click", () => {
-        alert("Adding to alert");
+    row.addEventListener("click", () => {
+    alert("Adding to alert");
 
-        });
+    });
 
     }
 

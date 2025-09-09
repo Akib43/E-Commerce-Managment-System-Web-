@@ -1,15 +1,6 @@
 <?php
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "e-commerce-managment-db";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if($conn -> connect_error){
-        die("Connection Falied". $conn -> connect_error);
-    }
+    include 'ServerStart.php';
 
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {    
@@ -24,10 +15,11 @@
         
         echo $ename . $eprice . $edept . $ereason . $eapdate . $eapby . $ercdate .$ercby;
 
-        $sql = "INSERT INTO expense_table  (Expense_Name, Expense_Ammount, Allocated_Department, Expense_Reason, Expense_Approved_Date, Expense_Approved_By, Expense_Received_Date, Expense_Received_By) VALUES ('$ename', '$eprice', '$edept', '$ereason', '$eapdate', '$eapby', '$ercdate', '$ercby')";
+        $sql = "INSERT INTO company_expense  (Expense_Name, Expense_Ammount, Expense_Department_Name, Expense_Reason, Expense_Approved_Date, Expense_Approved_By, Expense_Received_Date, Expense_Received_By) VALUES ('$ename', '$eprice', '$edept', '$ereason', '$eapdate', '$eapby', '$ercdate', '$ercby')";
 
         if($conn -> query($sql) === TRUE){
             echo "<script>alert('Updated');</script>";
+            include 'ExpenseTableShow.php';
         }
         else{
             echo "Error: ". $sql . "<br>" . $conn -> error;
