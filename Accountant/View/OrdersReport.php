@@ -2,8 +2,7 @@
 <html>
     <head>
         <title>Product Sales</title>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="../JS/OrdersReport.js " defer></script>
+        <script src="../JS/OrdersReport.js "></script>
         <link rel="Stylesheet" href="../CSS/OrdersReport.css">
 
     </head>
@@ -44,31 +43,37 @@
                 </div>
 
                 <div class="totalammount">
-                    <h4>Total Orders</h4>
+                    <h4>Revenue</h4>
                     <div class="Line"></div>
-                    <h1 id="">N\A</h1>
+                    <h1 id="revenue">N\A</h1>
                 </div>
+
+                <?php include '../PHP/orderDashboard.php'; ?>
 
                 <div class="tablecss">
                     <table id ="ordertable">
                         <tr>
                             <th>Order ID</th>
-                        </tr>
-                        <tr>
-                            <td>32476</td>
+                            <th>Customer ID</th>
+                            <th>Order Date</th>
+                            <th>Order Price</th>
                         </tr>
                     </table>
+                    <?php include '../PHP/OrderTableShow.php'; ?>
                 </div>
 
                 <div class="tablecss">
                     <table id ="Producttable">
                         <tr>
                             <th>Product ID</th>
-                        </tr>
-                        <tr>
-                            <td>32476</td>
+                            <th>Product Name</th>
+                            <th>Product Catagory</th>
+                            <th>Product Type</th>
+                            <th>Product Available</th>
+                            <th>Product Stocked</th>
                         </tr>
                     </table>
+                    <?php include '../PHP/ProductShowTable.php'; ?>
                 </div>
 
 

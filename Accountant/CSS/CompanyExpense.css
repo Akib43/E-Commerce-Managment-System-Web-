@@ -38,6 +38,7 @@ a{
     padding: 20px;
     border: 1px solid black;
     background-color: whitesmoke;
+    overflow: auto;
 }
 
 th, td{
