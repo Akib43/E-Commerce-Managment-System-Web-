@@ -32,6 +32,7 @@ function tableview(eID, ename, ammount, edept, ereason, apdate, apname, rcdate, 
             <td>${apname}</td>
             <td>${rcdate}</td>
             <td>${rcname}</td>
+
     `;
 
     tbl.appendChild(row);
