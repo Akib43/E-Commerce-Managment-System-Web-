@@ -1,32 +1,56 @@
 <?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $mail = $_POST['email'];
-        $pass = $_POST['password'];
+// Step 1: Start session if needed
+session_start();
 
-        if(empty($mail) || empty($pass)){
-           echo "<script>alert('Please fill all the fields');</script>";
-        }
-        else{
-            if(preg_match("/^[a-zA-Z0-9._]+@(gmail\.com|yahoo\.com|emial\.com)$/",$mail)){
-                header("Location: ../View/home.php");
-               //if($pass == ){}
+// Step 2: Define variables
+$email = $password = "";
+$emailErr = $passwordErr = "";
 
-            }else if(preg_match("/^[a-zA-Z0-9._]+@(accountant\.com)$/",$mail)){
-                header("Location: ../../Accountant/View/AccountantDashboard.php");
-                //if($pass == ){}
-            }else if(preg_match("/^[a-zA-Z0-9._]+@(hr\.com)$/",$mail)){
-                header("Location: ../../HR/View/home.php");
-                //if($pass == ){}
-            }else if(preg_match("/^[a-zA-Z0-9._]+@(deliveryman\.com)$/",$mail)){
-                header("Location: ../../DeliveryMan/View/home.php");
-                //if($pass == ){}
-            }else{
-                echo "<script>alert('Invalid email format');</script>";
-            }
+// Step 3: Run only when form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // --- Validate Email ---
+    if (empty($_POST["email"])) {
+        $emailErr = "Email is required";
+    } else {
+        $email = test_input($_POST["email"]);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Invalid email format";
         }
     }
-                    
-    else{
-        echo "<script>console.log('server fail');</script>";
+
+    // --- Validate Password ---
+    if (empty($_POST["password"])) {
+        $passwordErr = "Password is required";
+    } else {
+        $password = test_input($_POST["password"]);
+        if (strlen($password) < 6) {
+            $passwordErr = "Password must be at least 6 characters";
+        }
     }
+
+    // If no errors → continue to check user (example with dummy check)
+    if (empty($emailErr) && empty($passwordErr)) {
+        // Example: Hardcoded user for testing
+        $validEmail = "test@example.com";
+        $validPassword = "123456";
+
+        if ($email === $validEmail && $password === $validPassword) {
+            // Success: Redirect to dashboard
+            $_SESSION["user"] = $email;
+            header("Location: ../dashboard.php");
+            exit();
+        } else {
+            $passwordErr = "Incorrect email or password";
+        }
+    }
+}
+
+// Function to clean inputs
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 ?>
