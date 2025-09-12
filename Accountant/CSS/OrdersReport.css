@@ -74,7 +74,8 @@ tr:hover{
 .tablecss{
     background-color: whitesmoke;
     width: 46%;
-    height: 75vh;
+    height: 65vh;
     padding: 20px;
     border-radius: 10px;
+    overflow: auto;
 }

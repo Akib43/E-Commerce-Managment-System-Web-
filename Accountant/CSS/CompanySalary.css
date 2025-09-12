@@ -33,13 +33,13 @@ a{
 
 .tablebox{
     min-width: 800px;
-    width: 60%;
-    height: 100%;
+    width: 100%;
+    height: 50vh;
     padding: 20px;
     border: 1px solid black;
     background-color: whitesmoke;
+    overflow: auto;
 }
-
 
 th, td{
    border: 1px solid black;
@@ -64,13 +64,13 @@ tr:hover{
     flex-wrap: wrap;
 }
 
-input, select{
-    width: 270px;
-    height: 30px;
-    margin: 10px;
-    padding: 10px 15px;
-    border: 1px solid black;
-    border-radius: 10px;
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 button{
@@ -89,6 +89,8 @@ label, h2{
 }
 
 div.frm{
+    width: 500px;
+    min-width: 400px;
     border-color: 1px solid black;
     margin-top: 0px;
     margin-bottom: 40px;

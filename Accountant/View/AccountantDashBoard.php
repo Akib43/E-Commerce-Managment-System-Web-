@@ -26,73 +26,82 @@
         <div class="pagecontainer">
             
                 <div class="totalammount">
-                    <h4>Total Revenue</h4>
+                    <h4>Employees Working</h4>
                     <div class="Line"></div>
-                    <h1 id="revenueAmount">N/A</h1>
+                    <h1 id="employee">N/A</h1>
                 </div>
 
                 <div class="totalammount">
-                    <h4>Expenses</h4>
+                    <h4>Registered Costomers</h4>
                     <div class="Line"></div>
-                    <h1 id="expenseAmount">N/A</h1>
+                    <h1 id="customer">N/A</h1>
                 </div>
 
                 <div class="totalammount">
-                    <h4>Total Orders</h4>
+                    <h4>Varity of Product</h4>
                     <div class="Line"></div>
-                    <h1 id="grossprofit">N/A</h1>
+                    <h1 id="productvarity">N/A</h1>
                 </div>
 
                 <div class="totalammount">
-                    <h4>Net Profit</h4>
+                    <h4>Product Catagory</h4>
                     <div class="Line"></div>
-                    <h1 id="netprofitAmount">N/A</h1>
+                    <h1 id="productcatagory">N/A</h1>
                 </div>
 
                 <div class="totalammount">
-                    <h4>Invoices Due</h4>
+                    <h4>Orders</h4>
                     <div class="Line"></div>
-                    <h1 id="invicedueAmount">N/A</h1>
+                    <h1 id="orders">N/A</h1>
                 </div>
 
                 <div class="totalammount">
-                    <h4>Payments Due</h4>
+                    <h4>Order Ammount</h4>
                     <div class="Line"></div>
-                    <h1 id="paymentdueAmount">N/A</h1>
+                    <h1 id="ordercount">N/A</h1>
                 </div>
 
-                <div class="chartcontainer">
-                    <h4>Chat Room</h4>
-                    <div class="Line"></div>
-                    <h1 id="chatroom">N/A</h1>
-                </div>
-            
+
                 <div class="totalammount">
-                    <h4>Cash Conversion Cycle</h4>
+                    <h4>Refunded product</h4>
                     <div class="Line"></div>
-                    <meter id="Cashconversion" value="3" min="0" max="10">3 out of 10</meter>
+                    <h1 id="refundedproduct">N/A</h1>
                 </div>
 
                 <div class="totalammount">
-                    <h4>Budget Execution</h4>
+                    <h4>Refunded Ammount</h4>
                     <div class="Line"></div>
-                    <meter id="budgetexecution" value="3" min="0" max="10">3 out of 10</meter>
+                    <h1 id="refundedammount">N/A</h1>
                 </div>
 
                 <div class="totalammount">
-                    <h4>Debt to equaty ratio</h4>
+                    <h4>Total Expense</h4>
                     <div class="Line"></div>
-                    <meter id="debttequity" value="3" min="0" max="10">3 out of 10</meter>
+                    <h1 id="expense">N/A</h1>
                 </div>
 
                 <div class="totalammount">
-                    <h4>Invice to payment ratio</h4>
+                    <h4>Stocked Product Worth</h4>
                     <div class="Line"></div>
-                    <meter id="Invoicetopayment" value="3" min="0" max="10">3 out of 10</meter>
+                    <h1 id="stockedproductcost">N/A</h1>
                 </div>
-                
+
+                <div class="totalammount">
+                    <h4>Available Product Worth</h4>
+                    <div class="Line"></div>
+                    <h1 id="availableproductcost">N/A</h1>
+                </div>
+
+                <div class="totalammount">
+                    <h4>Revenue</h4>
+                    <div class="Line"></div>
+                    <h1 id="revenue">N/A</h1>
+                </div>
+
                 <div id="productprofit"></div>
                 <div id="Countryprofit"></div>
+
+                <?php include '../PHP/AccountantDashBoardInfo.php'; ?>
                 
         </div>
     </body>
