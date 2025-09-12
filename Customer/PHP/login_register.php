@@ -43,10 +43,10 @@ if(isset($_POST['login'])){
             }
             else if($user['role'] === 'hr')
             {
-                  header("Location:../hr.php");
+                  header("Location:../View/hr.php");
             }
             else{
-                 header("Location:../delivery_man.php");
+                 header("Location:../View/delivery_man.php");
             }
              
             exit();
@@ -55,7 +55,7 @@ if(isset($_POST['login'])){
     $_SESSION['login_error'] = 'Incorrect email or password';
     $_SESSION['active_form'] = 'login';
     session_unset();
-    header("location:../View/login.php");
+    header("location:../login.php");
     exit();
 }
 
