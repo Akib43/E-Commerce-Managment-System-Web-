@@ -39,6 +39,12 @@
     left: 80%;
 }
 /* end profile */
+.payment-method{
+    position: fixed;
+    left: 40%;
+    background-color: #BABABA;
+    display: none;
+}
 header{
     position: sticky;
     top: 0px;

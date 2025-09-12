@@ -14,6 +14,7 @@ if(isset($_POST['register'])){
     {
         $_SESSION['register_error'] = 'Email is already registered';
         $_SESSION['active_form'] = 'register';
+
     }
     else{
         $conn->query("INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password', '$role')");
@@ -33,6 +34,7 @@ if(isset($_POST['login'])){
         if(password_verify($password, $user['password'])){
             $_SESSION['name'] = $user['name'];
             $_SESSION['email'] = $user['email'];
+            setcookie("id", $user['id'], time()+86400, "/");
              
             if($user['role'] === 'admin'){
                 header("Location:../View/admin.php");
