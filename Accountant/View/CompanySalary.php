@@ -3,7 +3,7 @@
     <head>
         <title>Product Sales</title>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="../JS/CompanySalary.js " defer></script>
+        <script src="../JS/CompanySalary.js"></script>
         <link rel="stylesheet" href="../CSS/CompanySalary.css">
 
     </head>
@@ -26,18 +26,19 @@
         <div class = "pagecontainer">
             
             <div class="tablebox">
-                <table>
-                    <tr >
+                <table id="SalaryTable">
+                    <tr>
                         <th>Employee ID</th>
                         <th>Employee Name</th>
                         <th>Employee Department</th>
-                        <th>Employee Salary</th>
+                        <th>Employee Base Salary</th>
                         <th>Employee Increment Percentage</th>
                         <th>Employee Incremented Salary</th>
-                        <th>Employee PayDate</th></th>
+                        <!-- <th>Employee PayDate</th></th> -->
                     </tr>
 
                 </table>
+                <?php include '../PHP/SalaryTableShow.php'; ?>
             </div>
 
             <div class="Inputbox">
