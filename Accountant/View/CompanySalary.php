@@ -34,17 +34,15 @@
                         <th>Employee Base Salary</th>
                         <th>Employee Increment Percentage</th>
                         <th>Employee Incremented Salary</th>
-                        <!-- <th>Employee PayDate</th></th> -->
+                        <th>Employee PayDate</th></th>
                     </tr>
 
                 </table>
                 <?php include '../PHP/SalaryTableShow.php'; ?>
             </div>
 
-            <div class="Inputbox">
-                
                 <div class="frm">
-                    <form onsubmit="updateincrement()" action="../PHP/SalaryUpdate.php" method="POST">
+                    <form  action="../PHP/SalaryUpdate.php" method="POST">
                         <h2>Update Salary</h2>
                         <input type="text" id="empId" name="empId" placeholder="Employee ID"><br><br>
                         <input type="number" id="increment" name="increment" placeholder="Increment"><br><br>
@@ -53,9 +51,14 @@
                         <input type="submit" value="Update">
                     </form>
                 </div>
-                
-            </div>
 
+                <div class="frm">
+                    <form  action="../PHP/PaySalary.php" method="POST">
+                        <h2>Pay Salary</h2>
+                        <input type="text" id="PempId" name="PempId" placeholder="Employee ID">
+                        <input type="submit" value="Update">
+                    </form>
+                </div>
         </div>
 
     </body>

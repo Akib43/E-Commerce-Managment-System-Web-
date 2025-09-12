@@ -58,7 +58,6 @@
                     <h1>Approve Expense</h1>
                     <form onsubmit="return ApproveValid()" method="POST" action="../PHP/ExpenseTableUpdate.php">
                         <input type="text" name ="expensename" id="productname" placeholder="Product Name"/>
-                        <br>
                         <input type="number" name="expenseammount" id ="productprice" placeholder="Price"/>
                         <br>
                         <select name="department" id="Depertment">
@@ -66,13 +65,10 @@
                             <option value="Accounts">Accounts</option>
                             <option Value="HR">HR</option>
                         </select>
-                        <br>
                         <textarea name="expensereason" id="productreason" placeholder="Reason for purchase"></textarea>
                         <br>
                         <label>Approve Date</label><br>
                         <input type="date" name="approvedate" id="ApDate">
-                        
-                        <br>
                         <input type="text" name="approvedby" id="Approvedby" placeholder="Approved by">
                         <input type="date" name="receiveddate" id="receiveddate">
                         <input type="text" name="receivedby" id="receivedby" placeholder="Approved by">

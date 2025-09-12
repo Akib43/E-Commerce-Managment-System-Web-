@@ -33,8 +33,8 @@ a{
 
 .tablebox{
     min-width: 800px;
-    width: 65%;
-    height: 100%;
+    width: 100%;
+    height: 50vh;
     padding: 20px;
     border: 1px solid black;
     background-color: whitesmoke;
@@ -57,7 +57,7 @@ tr:hover{
 }
 
 .Inputbox{
-    min-width: 380px;
+    min-width: 100%;
     width: 27%;
     padding: 10px;
     justify-items: center;

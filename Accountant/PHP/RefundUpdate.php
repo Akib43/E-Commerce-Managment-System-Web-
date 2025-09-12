@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully";
-        header("Location: ../View/RefundRequests.php");
+        header("Location: ../View/Invoice.php");
     } else {
         echo "Error updating record: " . $conn->error;
     }
