@@ -73,8 +73,27 @@ tr:hover{
 
 .tablecss{
     background-color: whitesmoke;
-    width: 46%;
-    height: 75vh;
+    min-width: 600px;
+    width: 100%;
+    height: 50vh;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.valueinput{
+    background-color: whitesmoke;
+    min-width: 400px;
+    width: 400px;
     padding: 20px;
     border-radius: 10px;
 }

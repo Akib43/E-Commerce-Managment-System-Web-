@@ -4,7 +4,7 @@
     <head>
 
         <title>Product Sales</title>
-        <script src="../JS/Invoice.js" defer></script>
+        <script src="../JS/Invoice.js"></script>
         <link rel="Stylesheet" href="../CSS/Invoice.css">
 
     </head>
@@ -29,38 +29,103 @@
         <div class = "pagecontainer">
             
                 <div class="totalammount">
-                    <h4>Orders</h4>
+                    <h4>Refunds</h4>
                     <div class="Line"></div>
-                    <h1 id="totalorder">N\A</h1>
+                    <h1 id="refund">N\A</h1>
                 </div>
 
                 <div class="totalammount">
-                    <h4>Order Pending</h4>
+                    <h4>Refund Pending</h4>
                     <div class="Line"></div>
                     <h1 id="totalpending">N\A</h1>
                 </div>
 
                 <div class="totalammount">
-                    <h4>Orders Delivered</h4>
+                    <h4>Refund Approved</h4>
                     <div class="Line"></div>
-                    <h1 id="totaldelivered">N\A</h1>
+                    <h1 id="totalApproved">N\A</h1>
                 </div>
 
                 <div class="totalammount">
-                    <h4>Total Orders</h4>
+                    <h4>Refunded</h4>
                     <div class="Line"></div>
-                    <h1 id="">N\A</h1>
+                    <h1 id="totalrefunded">N\A</h1>
                 </div>
 
+                <div class="totalammount">
+                    <h4>Refunded Ammount</h4>
+                    <div class="Line"></div>
+                    <h1 id="totalrefundedammount">N\A</h1>
+                </div>
+
+                <div class="totalammount">
+                    <h4>Damaged Refund</h4>
+                    <div class="Line"></div>
+                    <h1 id="dmgrefund">N\A</h1>
+                </div>
+
+                <div class="totalammount">
+                    <h4>Wrong Delivery</h4>
+                    <div class="Line"></div>
+                    <h1 id="wrongdelevery">N\A</h1>
+                </div>
+
+                <div class="totalammount">
+                    <h4>Late Delivery</h4>
+                    <div class="Line"></div>
+                    <h1 id="late">N\A</h1>
+                </div>
+                
+
+                <?php include '../PHP/RefundDashboard.php'; ?>
+
                 <div class="tablecss">
-                    <table id ="ordertable">
+                    <table id ="refundtable">
                         <tr>
+                            <th>Refund ID</th>
                             <th>Order ID</th>
+                            <th>Customer ID</th>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Refund Amount</th>
+                            <th>Refund Date</th>
+                            <th>Refund Reason</th>
+                            <th>Refund Status</th>
                         </tr>
-                        <tr>
-                            <td>32476</td>
-                        </tr>
-                    </table>
+                    </table> 
+                </div>
+                <?php include '../PHP/RefundTableShow.php'; ?>
+
+                <div class="valueinput" >
+                    <form action="../PHP/AddRefund.php" method="POST">
+                        <h4>Add Refund Form</h4>
+                        <input type="text" name="Orderid" placeholder="Enter Order ID" required>
+                        <input type="text" name="productid" placeholder="Enter Product ID" required>
+                        <input type="text" name="qunatity" placeholder="Enter Quantity" required>
+                        <select name="reason" required>
+                            <option value="" disabled selected>Select Reason</option>
+                            <option value="Damaged Product">Damaged Product</option>
+                            <option value="Wrong Product">Wrong Product</option>
+                            <option value="Late Delivery">Late Delivery</option>
+                            <option value="Other">Other</option>
+                        </select> 
+                        <input type="submit" Value="Add">
+                    </form>
+                </div>
+
+                <div class="valueinput">
+                    <form action="../PHP/RefundUpdate.php" method="POST">
+                        <h4>Update Refund Form</h4>
+                        <input type="text" name="refundid" placeholder="Enter Refund ID" required>
+                        <select name="status" required>
+                            <option value="" disabled selected>Change Status</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Approved">Approved</option>
+                            <option value="Refunded">Refunded</option>
+                        </select>
+                        <input type="submit" Value="Update">
+                    </form>
                 </div>
 
         </div>
