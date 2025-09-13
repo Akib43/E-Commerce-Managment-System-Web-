@@ -63,6 +63,7 @@ else{
             $result=$conn->query($sql);
             if($result->num_rows>0){
                 $row = $result->fetch_assoc();
+                setcookie("id", $row['Employee_ID'], time()+86400, "/");
                     $_SESSION['id'] = $row['Employee_ID'];
                     $_SESSION['name'] = $row['Employee_Name'];
                     $_SESSION['email'] = $row['Employee_Email'];
@@ -73,7 +74,7 @@ else{
                 if(preg_match("/^[a-zA-Z0-9._]+@(accountant\.com)$/",$mail)){
                     header("Location: ../../Accountant/View/AccountantDashboard.php");
                 }else if(preg_match("/^[a-zA-Z0-9._]+@(hr\.com)$/",$mail)){
-                    header("Location: ../../HR/View/home.php");
+                    header("Location: ../../HR/View/dashboard.html");
                 }else if(preg_match("/^[a-zA-Z0-9._]+@(deliveryman\.com)$/",$mail)){
                     header("Location: ../../DeliveryMan/View/home.php");
                 }else{
@@ -85,6 +86,6 @@ else{
     }
 exit();
 }
-    
+   
 ?>
 

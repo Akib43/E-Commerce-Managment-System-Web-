@@ -78,7 +78,7 @@ include '../DB/add_product.php'
                     <h3>Training & Development</h3>
                 </a>
 
-                <a href="logout.php">
+                <a href="../../Customer/View/login.php">
                     <span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
                 </a>

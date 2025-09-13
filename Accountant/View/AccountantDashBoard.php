@@ -19,7 +19,7 @@
             <a href="Invoice.php">Invoice</a>
             <a href="CompanyExpense.php">Expenses</a>
             <a href="CompanySalary.php">Company Salary</a>
-            <a href="../../LoginPage.php">Logout</a>
+            <a href="../../Customer/View/login.php">Logout</a>
 
         </div>
         
