@@ -90,7 +90,7 @@ include '../DB/config.php';
 
                 <!-- Order Summary DB -->
 
-                <div class = "info">
+                <div class = "table-box">
                     <h1><br>HR Information</h1>
                     <table id="hr">
                         <tr>
