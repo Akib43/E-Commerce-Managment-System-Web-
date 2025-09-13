@@ -1,6 +1,5 @@
 <?php
-include '../DB/config.php';
-include '../DB/add_customer.php';
+include '../DB/add_hr.php';
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +7,7 @@ include '../DB/add_customer.php';
 
 <head>
     <title>ShopLio</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/edit.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
@@ -39,22 +38,22 @@ include '../DB/add_customer.php';
                     <h3>Employee Information</h3>
                 </a>
 
-                <a href="edit_hr.php">
+                <a href="edit_hr.php" class="active">
                     <span class="material-symbols-outlined">person_add_disabled</span>
-                    <h3>Add/Remove Employee</h3>
+                    <h3>Add/Remove HR</h3>
                 </a>
 
                 <a href="edit_accountant.php">
                     <span class="material-symbols-outlined">person_add_disabled</span>
                     <h3>Add/Remove Accountant</h3>
                 </a>
-
+                
                 <a href="edit_deliveryman.php">
                     <span class="material-symbols-outlined">person_add_disabled</span>
                     <h3>Add/Remove Delivery Man</h3>
                 </a>
 
-                <a href="edit_customer.php" class="active">
+                <a href="edit_customer.php">
                     <span class="material-symbols-outlined">person_add_disabled</span>
                     <h3>Add/Remove Customer</h3>
                 </a>
@@ -87,69 +86,120 @@ include '../DB/add_customer.php';
         <main>
             <div class="center">
                 <div class="top">
-                    <h1>Add/Remove Customer</h1>
+                    <h1>Add/Remove HR</h1>
 
                 <!-- Order Summary DB -->
-                 <div class="info">
-                    
-                    <h1><b>Customer Information</b></h1>
-                    <div class="edit_employee_info">
-                        <table>
-                            <tr>
-                                <td><b>Name:</b></td>
-                                <td><input type="text" required></td>
-                            </tr>
-                            <tr>
-                                <td><b>Email:</b></td>
-                                <td><input type="email" required></td>
-                            </tr>
-                            <tr>
-                                <td><b>Contact Number:</b></td>
-                                <td><input type="number" required></td>
-                            </tr>
-                            <tr>
-                                <td><b>Password:</b></td>
-                                <td><input type="password" required></td>
-                            </tr>
-                            <tr>
-                                <td><b>Address:</b></td>
-                                <td><input type="text" required></td>
-                            </tr>
-                            <tr>
-                                <td><b>Joining Date:</b></td>
-                                <td><input type="date" required></td>
-                            </tr>
+                 <br>
+                <h1><b>Customer Information</b></h1>
+                <div class="edit_employee_info">
+                    <form action="../DB/add_customer.php" method="POST">
+                        <table id="hr">
+                            <thead class="form-style">
+                                <tr>
+                                    <td><b>Name:</b></td>
+                                    <td><input type="text" name="name" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Email:</b></td>
+                                    <td><input type="email" name="email" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Contact Number:</b></td>
+                                    <td><input type="number" name="number" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Password:</b></td>
+                                    <td><input type="password" name="password" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Address:</b></td>
+                                    <td><input type="text" name="address" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Joining Date:</b></td>
+                                    <td><input type="date" name="joining" required></td>
+                                </tr>
+                            </thead>
                         </table>
-                        <button type="submit">Add Customer</button>
-                    </div>
+                        <button type="submit" class="btn">ADD Customer</button>
+                    </form>
 
-                 </div>
+                    <form action="../DB/update_customer.php" method="POST">
+                        <table id="acc">
+                            <thead class="form-style">
+                                <tr>
+                                    <td><b>ID:</b></td>
+                                    <td><input type="number" name="id" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Name:</b></td>
+                                    <td><input type="text" name="name" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Email:</b></td>
+                                    <td><input type="email" name="email" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Contact Number:</b></td>
+                                    <td><input type="number" name="number" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Password:</b></td>
+                                    <td><input type="password" name="password" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Address:</b></td>
+                                    <td><input type="text" name="address" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Joining Date:</b></td>
+                                    <td><input type="date" name="joining" required></td>
+                                </tr>
+                            </thead>
+                            <?php include '../DB/update_customer.php'; ?>
+                        </table>
+                        <button type="submit" class="btn">Update Customer</button>
+                    </form>
+
+                    <form action="../DB/delete_customer.php" method="POST">
+                        <table id="acc">
+                            <thead class="form-style">
+                                <tr>
+                                    <td><b>ID:</b></td>
+                                    <td><input type="number" name="id" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Name:</b></td>
+                                    <td><input type="text" name="name" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Email:</b></td>
+                                    <td><input type="email" name="email" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Contact Number:</b></td>
+                                    <td><input type="number" name="number" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Password:</b></td>
+                                    <td><input type="password" name="password" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Address:</b></td>
+                                    <td><input type="text" name="address" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Joining Date:</b></td>
+                                    <td><input type="date" name="joining" required></td>
+                                </tr>
+                            </thead>
+                            <?php include '../DB/delete_customer.php'; ?>
+                        </table>
+                        <button type="submit" class="btn">Delete Customer</button>
+                    </form>
+                </div>
             </div>
         </main>
-
-        <!-- Top right -->
-        <div class="right">
-            <div class="top">
-                <div class="theme">
-                    <span class = "material-symbols-outlined">dark_mode</span>
-                    <span class = "material-symbols-outlined active">light_mode</span>
-                </div>
-                <div class="profile">
-                    <div class="info">
-                        <p><b>Naimul</b></p>
-                        <p>HR</p>
-                        <small class="text-muted"></small>
-                    </div>
-                    <div class="profile-pic">
-                        <a href="profile.php"><img src="../img/HR_logo.jpg"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
-    <script src="../JS/script.js"></script>
-
 </body>
-
 </html>
