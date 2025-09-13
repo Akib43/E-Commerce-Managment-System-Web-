@@ -100,15 +100,15 @@
                                 <th>Number</th>
                                 <th>Training Status</th>
                             </tr>
-                            <?php include '../DB/show_leave_acc.php'; ?>
+                            <?php include '../DB/suggest_acc.php'; ?>
                         </table>
 
                         <br>
                     </div>
-                    <form action="../DB/suggest_accountant.php" method="POST">
+                    <form action="../DB/add_training.php" method="POST">
                         <br>
                         <h2>Accountant Info</h2>
-                        <table id="hr">
+                        <table id="acc">
                             <thead class="form-style">
                                 <tr>
                                     <td><b>ID:</b></td>
@@ -124,7 +124,7 @@
                                 </tr>
                                 <tr>
                                     <td><b>Training Suggestion:</b></td>
-                                    <td><input type="text" name="suggest" required></td>
+                                    <td><input type="text" name="training" required></td>
                                 </tr>
                             </thead>
                         </table>
