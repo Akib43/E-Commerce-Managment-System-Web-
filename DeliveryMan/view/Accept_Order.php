@@ -1,5 +1,5 @@
 
-<nav class="navbar">
+            <nav class="navbar">
                 <div class="logo">DeliveryMan</div>
                 <ul class="nav-links">
                     <li><a href="../view/Oder_Status.php">Order Status</a></li>
@@ -13,35 +13,41 @@
                     <br>
                     </ul>
             </nav>
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Accept Orders</title>
-    <script src="../js/accept.js"></script>
+    <title>Order Status</title>
+    <link rel="stylesheet" href="../css/Oder_Status.css">
+    <script src="../JS/accept.js"></script>
+    <style>
+        /* Basic card styling */
+        .order-card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+            display: inline-block;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+            font-family: Arial, sans-serif;
+        }
+        .order-card h3 { margin: 0 0 10px; }
+        .order-card p { margin: 5px 0; }
+        .status { font-weight: bold; margin-top: 10px; }
+        .picked { background-color: orange; color: white; border: none; padding: 8px 12px; margin-right:5px; cursor:pointer; border-radius:5px;}
+        .delivered { background-color: green; color: white; border: none; padding: 8px 12px; cursor:pointer; border-radius:5px;}
+        
+    </style>
 </head>
 <body>
-    <h2>Pending Orders</h2>
-    <div id="orders"></div>
+    <h1>Order Status</h1>
+    <div id="Accept_oder"></div>
 
-    <script>
-        // Fetch orders via PHP
-        fetch('../db/Accept_order.php')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(order => {
-                orderview(
-                    order.Order_ID,
-                    order.Order_Status,
-                    order.Order_Price,
-                    order.Order_Location,
-                    order.Order_City,
-                    order.Order_Type,
-                    order.Order_Product_Category,
-                    order.Customer_ID,
-                    order.Order_Date
-                );
-            });
-        });
-    </script>
+    <?php include '../db/Accept_oder.php'; ?>
 </body>
 </html>
+
+
+

@@ -1,5 +1,5 @@
 function orderview(orderID, status, price, location, city, type, category, customerID, date){
-    var bdy = document.getElementById("orders");
+    var bdy = document.getElementById("Accept_oder");
 
     var card = document.createElement("div");
     card.className = "order-card";
@@ -19,19 +19,19 @@ function orderview(orderID, status, price, location, city, type, category, custo
   
     // Picked button
     var btnPicked = document.createElement("button");
-    btnPicked.className = "picked";
-    btnPicked.innerHTML = "Picked";
+    btnPicked.className = "accept";
+    btnPicked.innerHTML = "Accept";
     btnPicked.onclick = function(){
-        window.location.href = "../db/OrderStatus.php?orderID=" + orderID + "&status=Picked";
+        window.location.href = "../db/Accept_oder.php?orderID=" + orderID + "&status=Picked";
     };
     card.appendChild(btnPicked);
 
     // Delivered button
     var btnDelivered = document.createElement("button");
-    btnDelivered.className = "delivered";
-    btnDelivered.innerHTML = "Delivered";
+    btnDelivered.className = "reject";
+    btnDelivered.innerHTML = "Reject";
     btnDelivered.onclick = function(){
-        window.location.href = "../db/OrderStatus.php?orderID=" + orderID + "&status=Delivered";
+        window.location.href = "../db/Accept_oder.php?orderID=" + orderID + "&status=Delivered";
     };
     card.appendChild(btnDelivered);
 
