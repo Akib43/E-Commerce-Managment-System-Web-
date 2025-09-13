@@ -76,14 +76,6 @@ h3{
     font-size: 14px;
 }
 
-h4{
-    font-size: 12px;
-}
-
-h5{
-    font-size: 10px;
-}
-
 small{
     font-size: 12px;
 }
@@ -214,19 +206,20 @@ main .date{
 }
 
 /* Total sales box size */
-
-section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/*  */
+/* section{ */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+/* } */
 
 main .insights{
+    display: grid;
     background-color: var(--clr-white);
     padding: var(--card-padding);
     margin-top: 20px;
-    grid-template-columns: 20% auto 20%;
-    gap: 50px;
+    grid-template-columns: (3, 1fr);
+    gap: 1.6rem;
 }
 
 /* Total sales box icon styles */
@@ -236,7 +229,6 @@ main .insights span{
     padding: 5px;
     border-radius: 50%;
     color: var(--clr-white);
-    font-size: 12px;
     cursor: pointer;
 }
 
@@ -277,8 +269,8 @@ main .insights .sales svg circle{
 }
 
 main .insights .attendance svg circle{
-    stroke-dashoffset: 20;
-    stroke-dasharray: 190;
+    stroke-dashoffset: 10;
+    stroke-dasharray: 160;
 }
 
 /* Progress Circle Number Styles */
