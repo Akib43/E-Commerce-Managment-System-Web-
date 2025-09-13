@@ -61,16 +61,16 @@
 
                 <a href="leave_days.php">
                     <span class="material-symbols-outlined">event</span>
-                    <h3>Leave Management</h3>
+                    <h3>Leave List</h3>
                     <span class="mgs_count">5</span>
                 </a>
 
-                <a href="give_leave.php">
+                <a href="give_leave.php" class="active">
                     <span class="material-symbols-outlined">event</span>
                     <h3>Leave Management</h3>
                 </a>
 
-                <a href="training.php" class="active">
+                <a href="training.php">
                     <span class="material-symbols-outlined">cast_for_education</span>
                     <h3>Training & Development</h3>
                 </a>
@@ -87,28 +87,37 @@
         <main>
             <div class="center">
                 <div class="top">
-                    <h1>Employee details</h1>
+                    <h1>Employee Leave Handling</h1>
 
-                    <!-- Order Summary DB -->
-
-                    <div class="table-box">
-                        <h1><br>Accountant Information</h1>
-                        <table id="acc">
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Number</th>
-                                <th>Training Status</th>
-                            </tr>
-                            <?php include '../DB/suggest_acc.php'; ?>
+                <div>    
+                    <form action="../DB/leave_hr.php" method="POST">
+                        <h2>HR info</h2>
+                        <table id="hr">
+                            <thead class="form-style">
+                                <tr>
+                                    <td><b>ID:</b></td>
+                                    <td><input type="number" name="id" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Name:</b></td>
+                                    <td><input type="text" name="name" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Contact Number:</b></td>
+                                    <td><input type="number" name="number" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Leave Request:</b></td>
+                                    <td><input type="text" name="leaves" required></td>
+                                </tr>
+                            </thead>
                         </table>
+                        <button type="submit" class="btn">Approve Leaves</button>
+                    </form>
 
-                        <br>
-                    </div>
-                    <form action="../DB/add_training.php" method="POST">
-                        <br>
-                        <h2>Accountant Info</h2>
-                        <table id="acc">
+                    <form action="../DB/leave_accountant.php" method="POST">
+                        <br><h2>Accountant Info</h2>
+                        <table id="hr">
                             <thead class="form-style">
                                 <tr>
                                     <td><b>ID:</b></td>
@@ -123,16 +132,42 @@
                                     <td><input type="number" name="number" required>
                                 </tr>
                                 <tr>
-                                    <td><b>Training Suggestion:</b></td>
-                                    <td><input type="text" name="training" required></td>
+                                    <td><b>Leave Request:</b></td>
+                                    <td><input type="text" name="leaves" required></td>
                                 </tr>
                             </thead>
                         </table>
-                        <button type="submit" class="btn">Suggestion Training</button>
+                        <button type="submit" class="btn">Approve Leaves</button>
                     </form>
+                            
+                    <form action="../DB/leave_deliveryman.php" method="POST">
+                        <br><h2>Delivery Man Info</h2>
+                        <table id="hr">
+                            <thead class="form-style">
+                                <tr>
+                                    <td><b>ID:</b></td>
+                                    <td><input type="number" name="id" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Name:</b></td>
+                                    <td><input type="text" name="name" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Contact Number:</b></td>
+                                    <td><input type="number" name="number" required>
+                                </tr>
+                                <tr>
+                                    <td><b>Leave Request:</b></td>
+                                    <td><input type="text" name="leaves" required></td>
+                                </tr>
+                            </thead>
+                        </table>
+                        <button type="submit" class="btn">Approve Leaves</button>
+                    </form>
+
                 </div>
+            </div>
         </main>
     </div>
 </body>
-
 </html>

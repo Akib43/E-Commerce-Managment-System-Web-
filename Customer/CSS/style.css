@@ -42,7 +42,14 @@
 .payment-method{
     position: fixed;
     left: 40%;
-    background-color: #BABABA;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    /* color: #FFFFFF; */
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    /* background: linear-gradient(#49245b, #692f698b); */
+    display: none;
+}
+.remove{
     display: none;
 }
 header{
