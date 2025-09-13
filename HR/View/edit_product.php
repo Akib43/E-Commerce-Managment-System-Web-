@@ -1,9 +1,12 @@
+<?php
+include '../DB/add_product.php'
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <title>ShopLio</title>
+    <link rel="stylesheet" href="../CSS/edit.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
@@ -19,43 +22,58 @@
 
             <!-- left panel option bar -->
             <div class="sidebar">
-                <a href="#">
+                <a href="dashboard.html">
                     <span class="material-symbols-outlined">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
 
-                <a href="#">
+                <a href="profile.php">
                     <span class="material-symbols-outlined">person</span>
                     <h3>Profile</h3>
                 </a>
 
-                <a href="#">
+                <a href="employee.php">
                     <span class="material-symbols-outlined">article_person</span>
                     <h3>Employee Information</h3>
                 </a>
 
-                <a href="#">
+                <a href="edit_hr.php">
                     <span class="material-symbols-outlined">person_add_disabled</span>
-                    <h3>Add/Remove Employee</h3>
+                    <h3>Add/Remove HR</h3>
                 </a>
 
-                <a href="#" class="active">
+                <a href="edit_accountant.php">
+                    <span class="material-symbols-outlined">person_add_disabled</span>
+                    <h3>Add/Remove Accountant</h3>
+                </a>
+
+                <a href="edit_deliveryman.php">
+                    <span class="material-symbols-outlined">person_add_disabled</span>
+                    <h3>Add/Remove Delivery Man</h3>
+                </a>
+
+                <a href="edit_customer.php">
+                    <span class="material-symbols-outlined">person_add_disabled</span>
+                    <h3>Add/Remove Customer</h3>
+                </a>
+
+                <a href="edit_product.php" class="active">
                     <span class="material-symbols-outlined">assessment</span>
-                    <h3>Edit Product Lists</h3>
+                    <h3>Add/Remove Product</h3>
                 </a>
 
-                <a href="#">
+                <a href="leave_days.php">
                     <span class="material-symbols-outlined">event</span>
                     <h3>Leave Management</h3>
                     <span class="mgs_count">5</span>
                 </a>
 
-                <a href="#">
+                <a href="training.php">
                     <span class="material-symbols-outlined">cast_for_education</span>
                     <h3>Training & Development</h3>
                 </a>
 
-                <a href="#">
+                <a href="logout.php">
                     <span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
                 </a>
@@ -67,20 +85,49 @@
         <main>
             <div class="center">
                 <div class="top">
-                    <h1>Edit product informations</h1>
+                    <h1>Add/Remove HR</h1>
 
-                    <!-- Edit Product Information list without db connection -->
-
+                <!-- Order Summary DB -->
+                 <br>
+                <h1><b>Product Information</b></h1>
+                <div class="edit_employee_info">
+                    <form action="../DB/add_hr.php" method="POST">
+                        <table>
+                            <thead class="form-style">
+                                <tr>
+                                    <td><b>Product Name:</b></td>
+                                    <td><input type="text" name="name" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Product Price:</b></td>
+                                    <td><input type="number" name="price" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Product Quantity:</b></td>
+                                    <td><input type="number" name="quantity" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Product Details:</b></td>
+                                    <td><input type="text" name="details"></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Product Warranty Policy:</b></td>
+                                    <td><input type="text" name="policy" required></td>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                        <br>
+                        <button type="submit" class="btn">Add Product</button>
+                        <button type="" class="btn">Update Product</button>
+                        <button type="" class="btn">Delete Product</button>
+                    </form>
                 </div>
             </div>
         </main>
-
-        <!-- Top right -->
-
-    </div>
-
-    <script src="../JS/script.js"></script>
-
+    </div>   
 </body>
-
 </html>
