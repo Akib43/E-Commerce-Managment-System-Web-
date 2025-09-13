@@ -61,8 +61,13 @@
 
                 <a href="leave_days.php">
                     <span class="material-symbols-outlined">event</span>
-                    <h3>Leave Management</h3>
+                    <h3>Leave List</h3>
                     <span class="mgs_count">5</span>
+                </a>
+
+                <a href="give_leave.php">
+                    <span class="material-symbols-outlined">event</span>
+                    <h3>Leave Management</h3>
                 </a>
 
                 <a href="training.php">

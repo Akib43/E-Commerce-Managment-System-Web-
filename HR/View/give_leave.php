@@ -59,7 +59,7 @@
                     <h3>Add/Remove Product</h3>
                 </a>
 
-                <a href="leave_days.php" class="active">
+                <a href="leave_days.php">
                     <span class="material-symbols-outlined">event</span>
                     <h3>Leave List</h3>
                     <span class="mgs_count">5</span>

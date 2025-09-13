@@ -65,6 +65,11 @@
                     <span class="mgs_count">5</span>
                 </a>
 
+                <a href="give_leave.php">
+                    <span class="material-symbols-outlined">event</span>
+                    <h3>Leave Management</h3>
+                </a>
+
                 <a href="training.php">
                     <span class="material-symbols-outlined">cast_for_education</span>
                     <h3>Training & Development</h3>
