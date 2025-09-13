@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2025 at 01:40 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Sep 13, 2025 at 08:47 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `e-commerce-managment-db`
 --
+CREATE DATABASE IF NOT EXISTS `e-commerce-managment-db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `e-commerce-managment-db`;
 
 -- --------------------------------------------------------
 
@@ -27,6 +29,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `company_expense`
 --
 
+DROP TABLE IF EXISTS `company_expense`;
 CREATE TABLE `company_expense` (
   `Expense_ID` int(11) NOT NULL,
   `Expense_Name` varchar(30) NOT NULL,
@@ -52,6 +55,7 @@ INSERT INTO `company_expense` (`Expense_ID`, `Expense_Name`, `Expense_Ammount`, 
 -- Table structure for table `customer_order_table`
 --
 
+DROP TABLE IF EXISTS `customer_order_table`;
 CREATE TABLE `customer_order_table` (
   `Order_ID` int(11) NOT NULL,
   `Order_Price` int(11) NOT NULL,
@@ -77,12 +81,27 @@ INSERT INTO `customer_order_table` (`Order_ID`, `Order_Price`, `Order_Location`,
 -- Table structure for table `customer_table`
 --
 
+DROP TABLE IF EXISTS `customer_table`;
 CREATE TABLE `customer_table` (
   `Customer_ID` int(11) NOT NULL,
-  `Customer_Name` int(11) NOT NULL,
-  `Customer_Email` int(11) NOT NULL,
-  `Customer_Phone` int(11) NOT NULL
+  `Customer_Name` varchar(100) NOT NULL,
+  `Customer_Number` int(11) NOT NULL,
+  `Customer_Email` varchar(50) NOT NULL,
+  `Customer_Password` varchar(50) NOT NULL,
+  `Customer_Address` varchar(100) NOT NULL,
+  `Customer_Registration_Date` date NOT NULL,
+  `Customer_Role` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `customer_table`
+--
+
+INSERT INTO `customer_table` (`Customer_ID`, `Customer_Name`, `Customer_Number`, `Customer_Email`, `Customer_Password`, `Customer_Address`, `Customer_Registration_Date`, `Customer_Role`) VALUES
+(1, 'MD. Mridul Ali', 1315238971, 'mridul@gmail.com', 'mridul1122', 'Bashundhara C Block, Dhaka, Bangladesh', '2025-09-12', ''),
+(2, 'Nazmul Islam', 1911220856, 'nazmul@gmail.com', 'n@zmul1122', 'Jurain, Dhaka', '2025-09-11', ''),
+(3, 'Yea Ahmed', 0, 'yea@gmail.om', '$2y$10$dJgCkSCpWKXS9Za.nHkwJ.U85jbuc5ixOE.O3uwBFLV', '', '0000-00-00', 'user'),
+(4, 'arfin', 0, 'arfin@gmail.com', '103240', '', '0000-00-00', 'user');
 
 -- --------------------------------------------------------
 
@@ -90,6 +109,7 @@ CREATE TABLE `customer_table` (
 -- Table structure for table `employee_table`
 --
 
+DROP TABLE IF EXISTS `employee_table`;
 CREATE TABLE `employee_table` (
   `Employee_ID` int(11) NOT NULL,
   `Employee_Name` varchar(100) NOT NULL,
@@ -97,16 +117,24 @@ CREATE TABLE `employee_table` (
   `Employee_Base_Salary` decimal(10,2) NOT NULL,
   `Employee_Increment_Percent` decimal(5,2) NOT NULL,
   `Employee_Final_Salary` decimal(10,2) GENERATED ALWAYS AS (`Employee_Base_Salary` + `Employee_Base_Salary` * `Employee_Increment_Percent` / 100) STORED,
-  `Last_Paid` date NOT NULL DEFAULT current_timestamp()
+  `Employee_Number` varchar(11) NOT NULL,
+  `Employee_Email` varchar(100) NOT NULL,
+  `Employee_Password` varchar(100) NOT NULL,
+  `Employee_Address` varchar(100) NOT NULL,
+  `Employee_Joining_Date` date NOT NULL,
+  `Employee_Performance` varchar(100) NOT NULL,
+  `Employee_Training` varchar(100) NOT NULL,
+  `Employee_Leaves` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `employee_table`
 --
 
-INSERT INTO `employee_table` (`Employee_ID`, `Employee_Name`, `Employee_Department`, `Employee_Base_Salary`, `Employee_Increment_Percent`, `Last_Paid`) VALUES
-(1, 'Akib', 'Accountant', 30000.00, 22.00, '2025-09-13'),
-(2, 'Sara', 'HR', 28000.00, 8.00, '2025-09-13');
+INSERT INTO `employee_table` (`Employee_ID`, `Employee_Name`, `Employee_Department`, `Employee_Base_Salary`, `Employee_Increment_Percent`, `Employee_Number`, `Employee_Email`, `Employee_Password`, `Employee_Address`, `Employee_Joining_Date`, `Employee_Performance`, `Employee_Training`, `Employee_Leaves`) VALUES
+(1, 'Akib Ashfaq', 'Accountant', 30000.00, 10.00, '01703890674', '', '@kib1122', 'Hatirpool, Dhaka, Bangladesh', '2025-09-02', '', 'Progressing', 'None'),
+(2, 'Naimul Islam', 'HR', 28000.00, 8.00, '01911220856', 'nisaikat06@gmail.com', 'n@imul1122', 'Jurain, Dhaka', '2025-09-01', '', '', 'Approved till 13 Sept'),
+(12, 'Yea Ahmed', 'Delivery Man', 0.00, 0.00, '01828371303', 'yea@gmail.om', 'yea1122', 'Jurain, Dhaka', '2025-09-04', '', '', 'None');
 
 -- --------------------------------------------------------
 
@@ -114,6 +142,7 @@ INSERT INTO `employee_table` (`Employee_ID`, `Employee_Name`, `Employee_Departme
 -- Table structure for table `product_table`
 --
 
+DROP TABLE IF EXISTS `product_table`;
 CREATE TABLE `product_table` (
   `Product_ID` int(11) NOT NULL,
   `Product_Name` varchar(30) NOT NULL,
@@ -122,18 +151,17 @@ CREATE TABLE `product_table` (
   `Product_Price` int(11) NOT NULL,
   `Product_Available` int(11) NOT NULL,
   `Product_Stocked` int(11) NOT NULL,
-  `Product_Details_1` varchar(100) NOT NULL,
-  `Product_Details_2` varchar(100) NOT NULL
+  `Product_Details_1` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `product_table`
 --
 
-INSERT INTO `product_table` (`Product_ID`, `Product_Name`, `Product_Category`, `Product_Type`, `Product_Price`, `Product_Available`, `Product_Stocked`, `Product_Details_1`, `Product_Details_2`) VALUES
-(1, 'Tissue', 'Home', 'Regular', 60, 20, 128, '', ''),
-(2, 'Sofa', 'Home Decoration', 'Furniture', 25000, 15, 20, '', ''),
-(3, 'Samsung Washing Machin', 'Home Applience', 'Washing Machin', 45000, 15, 20, '', '');
+INSERT INTO `product_table` (`Product_ID`, `Product_Name`, `Product_Category`, `Product_Type`, `Product_Price`, `Product_Available`, `Product_Stocked`, `Product_Details_1`) VALUES
+(1, 'Tissue', 'Home', 'Regular', 60, 20, 128, ''),
+(2, 'Sofa', 'Home Decoration', 'Furniture', 25000, 15, 20, ''),
+(3, 'Samsung Washing Machin', 'Home Applience', 'Washing Machin', 45000, 15, 20, '');
 
 -- --------------------------------------------------------
 
@@ -141,6 +169,7 @@ INSERT INTO `product_table` (`Product_ID`, `Product_Name`, `Product_Category`, `
 -- Table structure for table `refund_table`
 --
 
+DROP TABLE IF EXISTS `refund_table`;
 CREATE TABLE `refund_table` (
   `Refund_ID` int(11) NOT NULL,
   `Order_ID` int(11) NOT NULL,
@@ -184,6 +213,12 @@ ALTER TABLE `customer_order_table`
   ADD PRIMARY KEY (`Order_ID`);
 
 --
+-- Indexes for table `customer_table`
+--
+ALTER TABLE `customer_table`
+  ADD PRIMARY KEY (`Customer_ID`);
+
+--
 -- Indexes for table `employee_table`
 --
 ALTER TABLE `employee_table`
@@ -218,10 +253,16 @@ ALTER TABLE `customer_order_table`
   MODIFY `Order_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `customer_table`
+--
+ALTER TABLE `customer_table`
+  MODIFY `Customer_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `employee_table`
 --
 ALTER TABLE `employee_table`
-  MODIFY `Employee_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Employee_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `product_table`
