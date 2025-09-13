@@ -43,12 +43,12 @@
                     <span class="material-symbols-outlined">person_add_disabled</span>
                     <h3>Add/Remove Accountant</h3>
                 </a>
-                
+
                 <a href="edit_deliveryman.php">
                     <span class="material-symbols-outlined">person_add_disabled</span>
                     <h3>Add/Remove Delivery Man</h3>
                 </a>
-                
+
                 <a href="edit_customer.php">
                     <span class="material-symbols-outlined">person_add_disabled</span>
                     <h3>Add/Remove Customer</h3>
@@ -61,7 +61,7 @@
 
                 <a href="leave_days.php">
                     <span class="material-symbols-outlined">event</span>
-                    <h3>Leave List</h3>
+                    <h3>Leave Management</h3>
                     <span class="mgs_count">5</span>
                 </a>
 
@@ -87,12 +87,52 @@
         <main>
             <div class="center">
                 <div class="top">
-                    <h1>Employee Training & Development details</h1>
+                    <h1>Employee details</h1>
 
-                <!-- Order Summary DB -->
+                    <!-- Order Summary DB -->
 
-            </div>
+                    <div class="table-box">
+                        <h1><br>Accountant Information</h1>
+                        <table id="acc">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Number</th>
+                                <th>Training Status</th>
+                            </tr>
+                            <?php include '../DB/show_leave_acc.php'; ?>
+                        </table>
+
+                        <br>
+                    </div>
+                    <form action="../DB/suggest_accountant.php" method="POST">
+                        <br>
+                        <h2>Accountant Info</h2>
+                        <table id="hr">
+                            <thead class="form-style">
+                                <tr>
+                                    <td><b>ID:</b></td>
+                                    <td><input type="number" name="id" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Name:</b></td>
+                                    <td><input type="text" name="name" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Contact Number:</b></td>
+                                    <td><input type="number" name="number" required>
+                                </tr>
+                                <tr>
+                                    <td><b>Training Suggestion:</b></td>
+                                    <td><input type="text" name="suggest" required></td>
+                                </tr>
+                            </thead>
+                        </table>
+                        <button type="submit" class="btn">Suggestion Training</button>
+                    </form>
+                </div>
         </main>
     </div>
 </body>
+
 </html>
