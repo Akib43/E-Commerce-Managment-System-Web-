@@ -96,6 +96,43 @@
                         <input type="text" name="name" id="name"readonly>
 
                     </div>
+
+                    <form action="../DB/update_hr.php" method="POST">
+    <table id="acc">
+        <thead class="form-style">
+            <tr>
+                <td><b>ID:</b></td>
+                <td><input type="number" name="id" required></td>
+            </tr>
+            <tr>
+                <td><b>Name:</b></td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td><b>Email:</b></td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><b>Contact Number:</b></td>
+                <td><input type="number" name="number" required></td>
+            </tr>
+            <tr>
+                <td><b>Password:</b></td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><b>Address:</b></td>
+                <td><input type="text" name="address" required></td>
+            </tr>
+            <tr>
+                <td><b>Joining Date:</b></td>
+                <td><input type="date" name="joining" required></td>
+            </tr>
+        </thead>
+        <?php include '../DB/update_hr.php'; ?>
+    </table>
+    <button type="submit" class="btn">Update HR</button>
+</form>
                 
                     <div class="profile-photo">
                         <img src="../Img/HR_logo.jpg">
