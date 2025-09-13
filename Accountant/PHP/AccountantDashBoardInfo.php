@@ -1,4 +1,5 @@
 <?php
+
 include 'ServerStart.php';
 
 $sql = "SELECT * FROM employee_table";
@@ -63,6 +64,9 @@ $sql = "SELECT * FROM customer_order_table";
 $result = $conn->query($sql);
 $orderCount = $result->num_rows;
 echo "<script>document.getElementById('orders').innerHTML = '$orderCount';</script>";
+
+$revenue = $totalProfit - $totalRefund - $totalExpense;
+echo "<script>document.getElementById('revenue').innerHTML = '$revenue';</script>";
 
 $conn->close();
 ?>

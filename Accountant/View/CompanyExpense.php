@@ -11,16 +11,15 @@
         
         <div class= "Sidebar">
 
-            <img src="../Assets/Image/AccountantDashBoardLogo.png" alt="Accountant" style="width:50%; height:auto;">
-
-            <h2>Accountant</h2>
+            <a href="Profile.php"><img src="../Assets/Image/AccountantDashBoardLogo.png" alt="Accountant" style="width:50%; height:auto;"></a>
+            <h2>Accountant Dashboard</h2>
             <a href="AccountantDashBoard.php" class="active">Dashboard</a>
             <a href="ProductSales.php">Product Sales</a>
             <a href="OrdersReport.php">Orders</a>
             <a href="Invoice.php">Invoice</a>
             <a href="CompanyExpense.php">Expenses</a>
             <a href="CompanySalary.php">Company Salary</a>
-            <a href="../../LoginPage.php">Logout</a>
+            <a href="../PHP/EndSession.php">Logout</a>
 
         </div>
 

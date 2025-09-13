@@ -1,4 +1,4 @@
-function salarytableview(eID, ename, edept, baseSalary, incPercent, ammount, date){
+function salarytableview(eID, ename, edept, baseSalary, incPercent, ammount, date, perform){
         var tbl = document.getElementById("SalaryTable");
 
         var row = document.createElement("tr");
@@ -10,6 +10,7 @@ function salarytableview(eID, ename, edept, baseSalary, incPercent, ammount, dat
                 <td>${incPercent}</td>
                 <td>${ammount}</td>
                 <td>${date}</td>
+                <td>${perform}</td>
         `;
 
         tbl.appendChild(row);
