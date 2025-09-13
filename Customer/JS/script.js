@@ -57,6 +57,31 @@ buyBtn.addEventListener("click", function(e){
      cart.classList.remove("active")
      
 })
+// check out
+// const checkOutBtn=document.getElementById('check-out-btn');
+// const payment=document.querySelector(".payment-method");
+//          checkOutBtn.addEventListener("click", function(e){
+//             e.preventDefault();
+//             console.log("check out clicked");
+//             alert("Order Confirm");
+//             payment.classList.add("remove");
+
+//          });
+const form = document.querySelector("form");
+const payment = document.querySelector(".payment-method");
+
+form.addEventListener("submit", function (e) {
+    if (!form.checkValidity()) {
+        // if fields are invalid, let browser show its error
+        e.preventDefault();
+        return;
+    }
+
+    // if valid → show confirmation
+    alert("Order Confirm");
+    payment.classList.add("remove");
+    //  window.location.href="../View/index.html";
+});
 // add to cart button
 const cartIcon = document.getElementById("cart-icon");
 const cart = document.querySelector(".cart");
@@ -119,7 +144,9 @@ for (let addBtn of addBtns) {
           <span>${price}</span>
 
         `;
-       
+        // check.append(newp);
+    //    const pName=document.getElementById('p-name');
+         
         // increment decrement
         newDiv.querySelector(".cart-quantity")
             .addEventListener("click", function (event) {
