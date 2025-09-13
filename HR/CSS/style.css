@@ -165,7 +165,6 @@ header .sidebar a.active{
 }
 
 header .sidebar a.active::before{
-    content: '';
     width: 6px;
     height: 100%;
     background-color: var(--clr-primary);
@@ -206,21 +205,18 @@ main .date{
 }
 
 /* Total sales box size */
-/*  */
-/* section{ */
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-/* } */
 
 main .insights{
     display: grid;
-    background-color: var(--clr-white);
+    grid-template-columns: repeat(2, 1fr); /* two equal columns */
+    gap: 20px;
+    box-shadow: #7d8da1;
+    /* background-color: rgb(200, 204, 235); */
     padding: var(--card-padding);
-    margin-top: 20px;
-    grid-template-columns: (3, 1fr);
-    gap: 1.6rem;
+    border-radius: var(--card-border-radius);
+    flex-wrap: wrap;
 }
+
 
 /* Total sales box icon styles */
 
@@ -234,16 +230,15 @@ main .insights span{
 
 main .insights .middle{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 /* Progress Circle Styles */
 
 main .insights .progress{
+    display: inline;
     position: relative;
-    height: 68px;
-    width: 68px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -270,7 +265,7 @@ main .insights .sales svg circle{
 
 main .insights .attendance svg circle{
     stroke-dashoffset: 10;
-    stroke-dasharray: 160;
+    stroke-dasharray: 180;
 }
 
 /* Progress Circle Number Styles */
@@ -358,5 +353,5 @@ main .info table{
     display: grid;
     justify-content: space-between;
     align-items: center;
-    grid-template-columns: (3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
