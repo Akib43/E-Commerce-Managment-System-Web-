@@ -5,9 +5,12 @@
     {  
         $eId = $_POST['empId'];
         $eInc = $_POST['increment'];
+<<<<<<< HEAD
         // $ePDate = $_POST['payday'];
+=======
+>>>>>>> 68759c3640016379d6d59e04d2b8075778975297
 
-        $sql = "UPDATE employee_table SET Employee_Increment_percent = $eInc ,Employee_Final_Salary= $ePDate WHERE Employee_ID = $eId";
+        $sql = "UPDATE employee_table SET Employee_Increment_percent = $eInc , Last_Paid = CURRENT_DATE() WHERE Employee_ID = $eId";
 
         if($conn -> query($sql) === TRUE){
             header("Location: ../View/CompanySalary.php");
