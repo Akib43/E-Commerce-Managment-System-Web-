@@ -69,8 +69,9 @@
                         <label>Approve Date</label><br>
                         <input type="date" name="approvedate" id="ApDate">
                         <input type="text" name="approvedby" id="Approvedby" placeholder="Approved by">
+                        <label>Received Date</label><br>
                         <input type="date" name="receiveddate" id="receiveddate">
-                        <input type="text" name="receivedby" id="receivedby" placeholder="Approved by">
+                        <input type="text" name="receivedby" id="receivedby" placeholder="Received by">
                         <input type="submit" Value=Submit>
                     </form>
                 </div>

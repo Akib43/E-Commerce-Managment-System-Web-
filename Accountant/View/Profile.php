@@ -1,6 +1,3 @@
-<?php
-include '../PHP/logintrigger.php';
-?>
 <!DOCTYPE html>
 <html>
 
