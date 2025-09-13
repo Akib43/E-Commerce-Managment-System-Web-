@@ -5,7 +5,7 @@
     {  
         $eId = $_POST['empId'];
         $eInc = $_POST['increment'];
-        $ePDate = $_POST['payday'];
+        // $ePDate = $_POST['payday'];
 
         $sql = "UPDATE employee_table SET Employee_Increment_percent = $eInc ,Employee_Final_Salary= $ePDate WHERE Employee_ID = $eId";
 

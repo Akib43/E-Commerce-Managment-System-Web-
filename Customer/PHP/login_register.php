@@ -76,7 +76,7 @@ else{
                 }else if(preg_match("/^[a-zA-Z0-9._]+@(hr\.com)$/",$mail)){
                     header("Location: ../../HR/View/dashboard.html");
                 }else if(preg_match("/^[a-zA-Z0-9._]+@(deliveryman\.com)$/",$mail)){
-                    header("Location: ../../DeliveryMan/View/home.php");
+                    header("Location: ../../DeliveryMan/navbar/navbar.html");
                 }else{
                     echo "<script>alert('Invalid email format');</script>";
                 }
