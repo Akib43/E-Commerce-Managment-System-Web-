@@ -347,3 +347,14 @@ div.info{
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
+.profile-photo img {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 2px solid #7380ec;
+    position: fixed;
+    top: 15%;
+    right: 2%;
+    cursor: pointer;
+}

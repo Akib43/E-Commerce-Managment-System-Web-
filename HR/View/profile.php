@@ -89,8 +89,18 @@
                 <div class="top">
                     <h1>Personal Profile details</h1>
 
-                <!-- Order Summary DB -->
+                <div class="main-content">
+                    <!-- Order Summary DB -->
+                    <div class="tabel-box">
+                        <label id="hr">Name</label>
+                        <input type="text" name="name" id="name"readonly>
 
+                    </div>
+                
+                    <div class="profile-photo">
+                        <img src="../Img/HR_logo.jpg">
+                    </div>
+                </div>
             </div>
         </main>
     </div>

@@ -361,3 +361,10 @@ main .info table{
     box-shadow: var(--box-shadow);
     cursor: pointer;
 }
+
+.edit_employee_info{
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: (3, 1fr);
+}
