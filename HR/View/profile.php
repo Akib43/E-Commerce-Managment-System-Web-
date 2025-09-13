@@ -92,7 +92,7 @@
                 <div class="main-content">
                     <!-- Order Summary DB -->
                     <div class="tabel-box">
-                        <label id="hr">Name</label>
+                        <label id="">Name</label>
                         <input type="text" name="name" id="name"readonly>
 
                     </div>
