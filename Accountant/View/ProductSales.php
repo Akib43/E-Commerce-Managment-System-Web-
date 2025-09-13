@@ -3,7 +3,7 @@
     <head>
         <title>Product Sales</title>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <script src="../JS/ProductSales.js" defer></script>
+        <script src="../JS/ProductSales.js"></script>
         <link rel="stylesheet" href="../CSS/ProductSales.css">
 
     </head>
@@ -23,16 +23,8 @@
 
         </div>
 
-        <div class ="pagecontainer">
-            
-            <div id="HomeApplianceSales"></div>
-            <div id="AccessoriesSales"></div>
-            <div id="ClothesSales"></div>
-            <div id="ElectronicsSales"></div>
-            <div id="FootwareSales"></div>
-            <div id="GroceriesSales"></div>
-            
+        <div class="pagecontainer" id="chartsContainer">
+            <?php include '../PHP/ProductSalesGraph.php'; ?>
         </div>
-
     </body>
 </html>

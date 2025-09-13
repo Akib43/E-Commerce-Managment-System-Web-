@@ -27,7 +27,7 @@
         <div class = "pagecontainer">
             
             <div class="tablebox">
-                <h2 style=" position: sticky;">Company Expense</h2>
+                <h2 style=" position: sticky; ">Company Expense</h2>
                 <table id="expenseTable">
                     <tr >
                         <th>Expense ID</th>

@@ -3,7 +3,7 @@
     <head>
         <title>Accountant Dashboard</title>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <script src="../JS/AccountantDashBoard.js" defer></script>
+        <script src="../JS/AccountantDashBoard.js"></script>
         <link rel="stylesheet" href="../CSS/AccountantDashBoard.css">
     </head>
 
@@ -98,10 +98,14 @@
                     <h1 id="revenue">N/A</h1>
                 </div>
 
-                <div id="productprofit"></div>
-                <div id="Countryprofit"></div>
+                <div id="CategorySalesChart" class="chartDiv"></div>
+                <div id="Countryprofit" class="chartDiv"></div>
 
-                <?php include '../PHP/AccountantDashBoardInfo.php'; ?>
+                <?php 
+                    include '../PHP/AccountantDashBoardInfo.php'; 
+                    include '../PHP/DashboardStat.php';
+                ?>
+                
                 
         </div>
     </body>

@@ -95,8 +95,8 @@ include '../DB/add_product.php'
                 <!-- Order Summary DB -->
                  <br>
                 <h1><b>Product Information</b></h1>
-                <div class="edit_employee_info">
-                    <form action="../DB/add_hr.php" method="POST">
+                <div>
+                    <form action="../DB/add_product.php" method="POST">
                         <table>
                             <thead class="form-style">
                                 <tr>
@@ -104,31 +104,37 @@ include '../DB/add_product.php'
                                     <td><input type="text" name="name" required></td>
                                 </tr>
                                 <tr>
+                                    <td><b>Product category: </b></td>
+                                    <td><input type="text" name="category" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Product Type: </b></td>
+                                    <td><input type="text" name="type" required></td>
+                                </tr>
+                                <tr>
                                     <td><b>Product Price:</b></td>
                                     <td><input type="number" name="price" required></td>
                                 </tr>
                                 <tr>
                                     <td><b>Product Quantity:</b></td>
-                                    <td><input type="number" name="quantity" required></td>
+                                    <td><input type="number" name="available" required></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Product Stock:</b></td>
+                                    <td><input type="text" name="stock"></td>
                                 </tr>
                                 <tr>
                                     <td><b>Product Details:</b></td>
-                                    <td><input type="text" name="details"></td>
+                                    <td><input type="text" name="details" required></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Product Warranty Policy:</b></td>
-                                    <td><input type="text" name="policy" required></td>
+                                    <td><b>Image:</b></td>
+                                    <td><input type="file" name="file"></td>
                                 </tr>
                             </thead>
-                            
-                            <tbody>
-                                
-                            </tbody>
                         </table>
                         <br>
                         <button type="submit" class="btn">Add Product</button>
-                        <button type="" class="btn">Update Product</button>
-                        <button type="" class="btn">Delete Product</button>
                     </form>
                 </div>
             </div>

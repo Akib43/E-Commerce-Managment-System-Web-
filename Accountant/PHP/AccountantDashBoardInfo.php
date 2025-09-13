@@ -1,5 +1,4 @@
 <?php
-
 include 'ServerStart.php';
 
 $sql = "SELECT * FROM employee_table";
@@ -66,5 +65,4 @@ $orderCount = $result->num_rows;
 echo "<script>document.getElementById('orders').innerHTML = '$orderCount';</script>";
 
 $conn->close();
-
 ?>

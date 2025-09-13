@@ -45,21 +45,6 @@ div.Sidebar{
 }
 
 
-#Cashconversion, #budgetexecution, #debttequity, #Invoicetopayment{
-    width: 100px;
-    height: 30px;
-    margin-top: 20px;
-}
-
-#productprofit , #Countryprofit{
-    background-color: whitesmoke;
-    width: 660px;
-    max-width: 660px;
-    height: 380px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
 a{
     display: block;
     color: black;
@@ -68,4 +53,14 @@ a{
     font-size: 18px;
     margin: 10px 0;
     border-radius: 5px;
+}
+
+.chartDiv{
+
+    background-color: whitesmoke;
+    width: 100%;
+    min-width: 660px;
+    height: 380px;
+    padding: 20px;
+    border-radius: 10px;
 }

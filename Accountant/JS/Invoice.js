@@ -18,7 +18,8 @@ function refundtableview(rid, oid, cid, rpid, rpname, rpquantity, rammount, rrea
         tbl.appendChild(row);
 
         row.addEventListener("click", () => {
-        alert("Adding to alert");
+                
+                document.getElementById("refundid").value = rid;
 
         });
 

@@ -14,11 +14,6 @@ function producttableview(pID, pName, category, price, Available, Stocked){
 
     tbl.appendChild(row);
 
-    row.addEventListener("click", () => {
-    alert("Adding to alert");
-
-    });
-
     }
     
 function ordertableview(oID, cID, date, price){
@@ -34,11 +29,6 @@ function ordertableview(oID, cID, date, price){
     `;
 
     tbl.appendChild(row);
-
-    row.addEventListener("click", () => {
-    alert("Adding to alert");
-
-    });
 
 }
 

@@ -40,12 +40,11 @@ a{
 }
 
 
-#ClothesSales, #ElectronicsSales, #FootwareSales, 
-#GroceriesSales, #HomeApplianceSales, #AccessoriesSales{
+.chartDiv{
 
     background-color: whitesmoke;
-    width: 660px;
-    max-width: 660px;
+    width: 100%;
+    min-width: 660px;
     height: 380px;
     padding: 20px;
     border-radius: 10px;
