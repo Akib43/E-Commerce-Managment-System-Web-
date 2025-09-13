@@ -37,11 +37,6 @@ function tableview(eID, ename, ammount, edept, ereason, apdate, apname, rcdate, 
 
     tbl.appendChild(row);
 
-    row.addEventListener("click", () => {
-    alert("Adding to alert");
-
-    });
-
     }
 
 
