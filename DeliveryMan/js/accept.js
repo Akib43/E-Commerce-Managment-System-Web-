@@ -16,13 +16,7 @@ function orderview(orderID, status, price, location, city, type, category, custo
     `;
      
 
-    //accept button
-    var btnPicked = document.createElement("button");
-    btnPicked.className = "accept";
-    btnPicked.innerHTML = "accept";
-    btnPicked.onclick = function(){
-        window.location.href = "../db/OrderStatus.php?orderID=" + orderID + "&status=Picked";
-    };
+  
     // Picked button
     var btnPicked = document.createElement("button");
     btnPicked.className = "picked";
