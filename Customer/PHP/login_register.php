@@ -1,61 +1,64 @@
 <?php
-<<<<<<< HEAD
 
-session_start();
-Include 'config.php';
 
-if (isset($_POST['register'])) {
-    $name   = $_POST['name'];
-    $email  = $_POST['email'];
-    $password = $_POST['password'];
+// session_start();
+// Include 'config.php';
 
-    // Check if email exists
-    $checkEmail = $conn->query("SELECT * FROM customer_table WHERE Customer_Email = '$email'");
-    if ($checkEmail->num_rows > 0) {
-        $_SESSION['register_error'] = 'Email is already registered';
-        $_SESSION['active_form'] = 'register';
-    }
-     else {
-        // Insert new user
-        $conn->query("INSERT INTO customer_table 
-            (Customer_Name, Customer_Email, Customer_Password) 
-            VALUES 
-            ('$name', '$email', '$password')");
-    }
+// if (isset($_POST['register'])) {
+//     $name   = $_POST['name'];
+//     $email  = $_POST['email'];
+//     $password = $_POST['password'];
 
-    session_unset();
-    header("location:../View/login.php");
-    exit();
-}
+//     // Check if email exists
+//     $checkEmail = $conn->query("SELECT * FROM customer_table WHERE Customer_Email = '$email'");
+//     if ($checkEmail->num_rows > 0) {
+//         $_SESSION['register_error'] = 'Email is already registered';
+//         $_SESSION['active_form'] = 'register';
+//     }
+//      else {
+//         // Insert new user
+//         $conn->query("INSERT INTO customer_table 
+//             (Customer_Name, Customer_Email, Customer_Password) 
+//             VALUES 
+//             ('$name', '$email', '$password')");
+//     }
 
-// login
-   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $mail     = $_POST['email'];
-    $password = $_POST['password'];
+//     session_unset();
+//     header("location:../View/login.php");
+//     exit();
+// }
 
-    if (preg_match("/^[a-zA-Z0-9._]+@(gmail\.com|yahoo\.com|email\.com)$/", $mail)) {
-        $sql = "SELECT * FROM customer_table WHERE Customer_Email = '$mail'";
-        $result = $conn->query($sql);
+// // login
+//    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     $mail     = $_POST['email'];
+//     $password = $_POST['password'];
 
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc(); // fetch only one row
+//     if (preg_match("/^[a-zA-Z0-9._]+@(gmail\.com|yahoo\.com|email\.com)$/", $mail)) {
+//         $sql = "SELECT * FROM customer_table WHERE Customer_Email = '$mail'";
+//         $result = $conn->query($sql);
+
+//         if ($result->num_rows > 0) {
+//             $row = $result->fetch_assoc(); // fetch only one row
             
-             setcookie("id", $row['Customer_ID'], time()+86400, "/");
+//              setcookie("id", $row['Customer_ID'], time()+86400, "/");
 
-            // set session
-            $_SESSION['id']    = $row['Customer_ID'];
-            $_SESSION['name']  = $row['Customer_Name'];
-            $_SESSION['email'] = $row['Customer_Email'];
+//             // set session
+//             $_SESSION['id']    = $row['Customer_ID'];
+//             $_SESSION['name']  = $row['Customer_Name'];
+//             $_SESSION['email'] = $row['Customer_Email'];
 
-            // check password (plain text match, since you didn’t use hash here)
-            if ($password === $row['Customer_Password']) {
-                header("Location: ../View/index.html");
-                exit();
-            } else {
-                echo "<script>alert('Invalid password');</script>";
-=======
+//             // check password (plain text match, since you didn’t use hash here)
+//             if ($password === $row['Customer_Password']) {
+//                 header("Location: ../View/index.html");
+//                 exit();
+//             } else {
+//                 echo "<script>alert('Invalid password');</script>";
+//             } 
+//         }
+        
+//     }
 session_start();
-require_once 'config.php';
+include 'config.php';
 
 // REGISTER
 if (isset($_POST['register'])) {
@@ -108,14 +111,14 @@ if (isset($_POST['login'])) {
                 header("Location: ../View/hr.php");
             } else {
                 header("Location: ../View/delivery_man.php");
->>>>>>> d8c1a5f7179d3cd2d7d77e6135cbdb3ad4bc475b
+
             }
         } else {
             echo "<script>alert('Email not found');</script>";
         }
     }
 
-<<<<<<< HEAD
+
 else{
             $sql = "SELECT * FROM employee_table WHERE Employee_Email = '$mail'";
             $result=$conn->query($sql);
@@ -143,13 +146,13 @@ else{
         
     }
 exit();
-=======
+
     // Wrong login
     $_SESSION['login_error'] = 'Incorrect email or password';
     $_SESSION['active_form'] = 'login';
     header("Location: ../View/login.php");
     exit();
->>>>>>> d8c1a5f7179d3cd2d7d77e6135cbdb3ad4bc475b
+
 }
    
 ?>
