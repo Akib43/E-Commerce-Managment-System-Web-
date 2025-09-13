@@ -100,24 +100,9 @@ include '../DB/add_hr.php';
                                     <td><input type="text" name="name" required></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Email:</b></td>
-                                    <td><input type="email" name="email" required></td>
-                                </tr>
                                 <tr>
                                     <td><b>Contact Number:</b></td>
-                                    <td><input type="number" name="number" required></td>
-                                </tr>
-                                <tr>
-                                    <td><b>Password:</b></td>
-                                    <td><input type="password" name="password" required></td>
-                                </tr>
-                                <tr>
-                                    <td><b>Address:</b></td>
-                                    <td><input type="text" name="address" required></td>
-                                </tr>
-                                <tr>
-                                    <td><b>Joining Date:</b></td>
-                                    <td><input type="date" name="joining" required></td>
+                                    <td><input type="number" name="number"></td>
                                 </tr>
                             </thead>
                         </table>
