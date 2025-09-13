@@ -1,9 +1,13 @@
+<?php
+include '../DB/config.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>ShopLio</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/edit.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
@@ -34,9 +38,24 @@
                     <h3>Employee Information</h3>
                 </a>
 
-                <a href="edit_employee.php">
+                <a href="edit_hr.php">
                     <span class="material-symbols-outlined">person_add_disabled</span>
-                    <h3>Add/Remove Employee</h3>
+                    <h3>Add/Remove HR</h3>
+                </a>
+
+                <a href="edit_accountant.php">
+                    <span class="material-symbols-outlined">person_add_disabled</span>
+                    <h3>Add/Remove Accountant</h3>
+                </a>
+
+                <a href="edit_deliveryman.php">
+                    <span class="material-symbols-outlined">person_add_disabled</span>
+                    <h3>Add/Remove Delivery Man</h3>
+                </a>
+
+                <a href="edit_customer.php">
+                    <span class="material-symbols-outlined">person_add_disabled</span>
+                    <h3>Add/Remove Customer</h3>
                 </a>
 
                 <a href="edit_product.php">
@@ -73,88 +92,64 @@
 
                 <div class = "info">
                     <h1><br>HR Information</h1>
-
-                    <table>
-                        <thead>
+                    <table id="hr">
                         <tr>
-                            <td><b>ID </b></td>
-                            <td><b>Name </b></td>
-                            <td><b>Contact Number </b></td>
-                            <td><b>Email </b></td>
-                            <td><b>Password </b></td>
-                            <td><b>Address </b></td>
-                            <td><b>Joining Date </b></td>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Number</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Address</th>
+                            <th>Joining Date</th>
                         </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>HR-001</td>
-                                <td>Naimul Islam</td>
-                                <td>01911220856</td>
-                                <td>naimulislamaiub@gmail.com</td>
-                                <td>n@imul123</td>
-                                <td>Jurain, Dhaka, Bangladesh</td>
-                                <td>2025-08-30</td>
-                            </tr>
-                        </tbody>
+                        <?php include '../DB/show_hr.php' ?>
                     </table>
 
                     <h1><br>Accountant Information</h1>
+                    <table id="acc">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Number</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Address</th>
+                            <th>Joining Date</th>
+                        </tr>
+                        <?php include '../DB/show_accountant.php'; ?>
+                    </table>
+                    
 
-                    <table>
-                        <thead>
-                            <tr>
-                                <td><b>ID</b></td>
-                                <td><b>Name</b></td>
-                                <td><b>Contact Number</b></td>
-                                <td><b>Email</b></td>
-                                <td><b>Password</b></td>
-                                <td><b>Address</b></td>
-                                <td><b>Joining Date</b></td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ACC-001</td>
-                                <td>Akib Ashfaq</td>
-                                <td>01911220856</td>
-                                <td>akibash@gmail.com</td>
-                                <td>@kib123</td>
-                                <td>Hatirpool, Dhaka, Bangladesh</td>
-                                <td>2025-08-31</td>
-                            </tr>
-                        </tbody>
+                    <h1><br>Customer Information</h1>
+                    <table id="customer">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Number</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Address</th>
+                            <th>Joining Date</th>
+                        </tr>
+                        <?php include '../DB/show_customer.php' ?>
+                    </table>
+
+                    <h1><br>Delivery Man Information</h1>
+                    <table id="delivery">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Number</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Address</th>
+                            <th>Joining Date</th>
+                        </tr>
+                        <?php include '../DB/show_deliveryman.php'; ?>
                     </table>
                 </div>
             </div>
         </main>
-
-        <!-- Top right -->
-        <div class="right">
-            <div class="top">
-                <button id="menu_bar">
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
-                <div class="theme">
-                    <span class = "material-symbols-outlined">dark_mode</span>
-                    <span class = "material-symbols-outlined active">light_mode</span>
-                </div>
-                <div class="profile">
-                    <div class="info">
-                        <p><b>Naimul</b></p>
-                        <p>HR</p>
-                        <small class="text-muted"></small>
-                    </div>
-                    <div class="profile-pic">
-                        <a href="profile.php"><img src="../img/HR_logo.jpg"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
-    <script src="../JS/script.js"></script>
-
 </body>
-
 </html>
