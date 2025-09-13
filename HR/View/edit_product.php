@@ -85,7 +85,7 @@ include '../DB/add_product.php'
         <main>
             <div class="center">
                 <div class="top">
-                    <h1>Add/Remove HR</h1>
+                    <h1>Add/Remove Product</h1>
 
                 <!-- Order Summary DB -->
                  <br>
