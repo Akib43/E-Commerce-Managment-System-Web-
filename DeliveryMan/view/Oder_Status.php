@@ -1,17 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Oder Status</title>
-        <script src="../JS/orderview.js"></script>
-        <link rel="stylesheet" href="../css/Oder_Status.css">
 
-</head>
-<body>
-    <div id=  "orders">
-    
-    </div> -->
-    <!-- <div class="from"> -->
-        <!-- <from> -->
             <nav class="navbar">
                 <div class="logo">DeliveryMan</div>
                 <ul class="nav-links">
@@ -26,27 +13,7 @@
                     <br>
                     </ul>
             </nav>
-                <!-- <h1>Order Status</h1> -->
-                
-        <!-- </from> -->
-<!-- </div> -->
-    <!-- <table id="order">
-                    <tr>
-                        <th>Product_ID</th>
-                        <th>Product_Name</th>
-                        <th>Product_Category</th>
-                        <th>Product_Type</th>
-                        <th>Product_Price</th>
-                        <th>Product_Available</th>
-                        <th>Product_Stocked</th>
-                    </tr>
-                    
-                </table>
-             <button class="btn"><a href="../view/Accept_Order.html">Next</a></button>
-              
 
-</body>
-</html>-->
 
 <!DOCTYPE html>
 <html lang="en">
