@@ -82,7 +82,7 @@
         <main>
             <div class="center">
                 <div class="top">
-                    <h1>Add/Remove HR</h1>
+                    <h1>Add/Remove Accountant</h1>
 
                 <!-- Order Summary DB -->
                  <br>
