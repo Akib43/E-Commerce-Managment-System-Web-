@@ -86,7 +86,7 @@
 
                 <!-- Order Summary DB -->
 
-                <div class = "info">
+                <div class = "table-box">
                     <h1><br>HR Information</h1>
                     <table id="hr">
                         <tr>
@@ -121,6 +121,8 @@
                     </table>
 
                     <br><br><br>
+                </div>
+                <div>    
                     <form action="../DB/leave_hr.php" method="POST">
                         <h2>HR info</h2>
                         <table id="hr">
