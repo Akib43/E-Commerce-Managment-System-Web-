@@ -88,9 +88,9 @@
                             <th>Product Name</th>
                             <th>Quantity</th>
                             <th>Refund Amount</th>
-                            <th>Refund Date</th>
                             <th>Refund Reason</th>
                             <th>Refund Status</th>
+                            <th>Refund Date</th>
                         </tr>
                     </table> 
                 </div>
