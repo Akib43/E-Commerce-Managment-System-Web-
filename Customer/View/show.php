@@ -29,7 +29,12 @@
         <input type="text" id="id" value="1" readonly><br>
         <label for="" style="margin-right: 5px;">Phone Number:</label>
         <input type="text" id="phn-no"><br>
-        <button type="submit">Save Info</button>
+        <label for="" style="margin-right: 48px;">Address:</label>
+        <input type="text" id="address"><br>
+        <div class="btn">
+            <button type="submit" style="padding: 10px 120px; border-radius: 10px; background-color:blueviolet; color:#FFFFFF; font-size:larger;">Save Info</button>
+        </div>
+        
 
     </form>
     <?php
