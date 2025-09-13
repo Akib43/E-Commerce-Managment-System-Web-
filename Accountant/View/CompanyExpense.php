@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Product Sales</title>
+        <title>Company Expense</title>
         <script src="../JS/CompanyExpense.js"></script>
         <link rel="stylesheet" href="../CSS/CompanyExpense.css">
         

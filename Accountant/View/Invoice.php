@@ -3,7 +3,7 @@
 
     <head>
 
-        <title>Product Sales</title>
+        <title>Invoice</title>
         <script src="../JS/Invoice.js"></script>
         <link rel="Stylesheet" href="../CSS/Invoice.css">
 
