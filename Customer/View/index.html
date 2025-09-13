@@ -90,24 +90,31 @@
     <!-- end view cart section -->
      <!-- payment method -->
       <section class="payment-method">
-        <h2 style="margin-bottom: 20px;">Payment Procedure</h2>
+      
         <div>
-            <form action="../PHP/checkout.php" method="post">
+            <form class="form" action="../PHP/checkout.php" method="post" style="padding: 20px; border-radius: 15px; height: 500px;">
+                <h2 style="margin-bottom: 20px;">Payment Procedure</h2>
                 <input type="hidden" name="total-price" id="checkout">
-                <label for="">Select Area:</label>
-                <select name="" id="">
+                <input id="p-name" type="text" name="name" placeholder="Enter Your Name" style="padding: 10px; margin-bottom: 15px; border-radius: 8px;" required><br>
+                <input id="p-email" type="email" name="email" placeholder="Enter Your Email" style="padding: 10px; margin-bottom: 15px; border-radius: 8px;" required><br>
+                <input id="p-phn" type="text" name="phone" placeholder="Enter Your Phone Number" style="padding: 10px; margin-bottom: 15px; border-radius: 8px;" required><br>
+                <label for="" style="font-size: 18px; font-weight: 600;">Select Area:</label> <br>
+                <select name="area" id="" placeholder="" style="padding:10px 50px 10px 50px; border-radius: 8px; margin-top: 10px; margin-bottom: 10px; " required>
                     <option value="">--select--</option>
+                    <option value="">Bashundhra</option>
                     <option value="">Uttara</option>
                     <option value="">Mirpur</option>
-                    <option value="">Bashundhra</option>
                 </select>
                 <br>
-                <label for="">Select Payment Method:</label>
+                <label for="" style="margin-top: 15px;">Select Payment Method:</label>
                 <label><input type="radio" name="hobby" value="reading"> Online</label>
                 <label><input type="radio" name="hobby" value="traveling"> Cash On Delivery</label>
                 <hr style="margin-top: 10px; margin-bottom: 10px;">
-                <p id="check">Total: $</p><p id="total-p"></p>
-               <input type="submit" value="Submit">
+                <p id="p-name"></p>
+                <span id="check" style="font-size: 18px; font-weight: 600;">Total: $</span><span id="total-p" style="font-size: 18px; font-weight: 600;"></span><br>
+                <div class="check-btn" style="position: fixed; left: 50%; margin-bottom: 15px;">
+                    <button id="check-out-btn" type="submit"  style="background-color: rgb(1, 1, 22); color: #FFFFFF; padding: 10px 30px; margin-top: 20px; border-radius: 10px;">Check Out</button>
+                </div>
             </form>
         </div>
     </section>
