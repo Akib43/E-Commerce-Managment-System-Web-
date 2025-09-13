@@ -1,22 +1,21 @@
+
+
 <?php
-include'start.php';
+include "start.php";
 
-$data = json_decode(file_get_contents("php://input"));
-$orderId = $data->orderId;
-$status = $data->status;
+if (isset($_GET['orderID']) && isset($_GET['status'])) {
+    $orderID = $_GET['orderID'];
+    $status = $_GET['status'];
 
-$sql = "UPDATE Customer_Order_Table SET Order_Status = ? WHERE Order_ID = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("si", $status, $orderId);
+    $sql = "UPDATE customer_order_table SET Order_Status = '$status' WHERE Order_ID = '$orderID'";
 
-if=($stmt->execute()){
-    echo "Order status updated to '$status'";
-
-} else{
-    echo "Error update status.";
+    if ($conn->query($sql) === TRUE) {
+        header("Location: ../view/order_Status.php"); // redirect back
+        exit();
+    } else {
+        echo "Error updating order: " . $conn->error;
+    }
+} else {
+    echo "Invalid request";
 }
-
-
-$stmt->close();
-$conn->close();
 ?>

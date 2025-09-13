@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 include 'start.php';
 
 $sql = "SELECT Order_ID, Order_Price, Order_Location, Order_City, Order_Type, Order_Product_Category, Order_Status, Customer_ID, Order_Date 
@@ -27,4 +27,4 @@ if($result && $result->num_rows > 0) {
 } else {
     echo "<p>No orders found for delivery.</p>";
 }
-?>
+?> -->

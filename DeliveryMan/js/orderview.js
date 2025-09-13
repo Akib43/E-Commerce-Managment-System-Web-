@@ -1,37 +1,39 @@
-function orderview(id, status, price, location, city, type, category, customerId, date) {
-    const container = document.getElementById("orders");
+function orderview(orderID, status, price, location, city, type, category, customerID, date){
+    var bdy = document.getElementById("orders");
 
-    const card = document.createElement("div");
+    var card = document.createElement("div");
     card.className = "order-card";
 
     card.innerHTML = `
-        <h3>Order #${id}</h3>
-        <p><strong>Status:</strong> ${status}</p>
-        <p><strong>Price:</strong> ${price}</p>
-        <p><strong>Location:</strong> ${location}, ${city}</p>
-        <p><strong>Type:</strong> ${type}</p>
-        <p><strong>Category:</strong> ${category}</p>
-        <p><strong>Customer ID:</strong> ${customerId}</p>
-        <p><strong>Date:</strong> ${date}</p>
-        <button class="picked" onclick="updateStatus(${id}, 'Picked')">Picked</button>
-        <button class="delivered" onclick="updateStatus(${id}, 'Delivered')">Delivered</button>
+        <h3>Order #${orderID}</h3>
+        <p><b>Status:</b> <span class="status-text">${status}</span></p>
+        <p><b>Price:</b> ${price}</p>
+        <p><b>Location:</b> ${location}, ${city}</p>
+        <p><b>Type:</b> ${type}</p>
+        <p><b>Category:</b> ${category}</p>
+        <p><b>Customer ID:</b> ${customerID}</p>
+        <p><b>Date:</b> ${date}</p>
     `;
+     
 
-    container.appendChild(card);
-}
 
-function updateStatus(orderId, newStatus) {
-    fetch('../db/updateStatus.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ orderId: orderId, status: newStatus })
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert(data);
-        location.reload();
-    })
-    .catch(error => console.error('Error:', error));
+    // Picked button
+    var btnPicked = document.createElement("button");
+    btnPicked.className = "picked";
+    btnPicked.innerHTML = "Picked";
+    btnPicked.onclick = function(){
+        window.location.href = "../db/OrderStatus.php?orderID=" + orderID + "&status=Picked";
+    };
+    card.appendChild(btnPicked);
+
+    // Delivered button
+    var btnDelivered = document.createElement("button");
+    btnDelivered.className = "delivered";
+    btnDelivered.innerHTML = "Delivered";
+    btnDelivered.onclick = function(){
+        window.location.href = "../db/OrderStatus.php?orderID=" + orderID + "&status=Delivered";
+    };
+    card.appendChild(btnDelivered);
+
+    bdy.appendChild(card);
 }
