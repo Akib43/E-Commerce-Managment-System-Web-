@@ -4,11 +4,6 @@ include 'config.php';
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $id = $_POST['id'];
     $name = $_POST['name'];
-    $email = $_POST['email'];
-    $number = $_POST['number'];
-    $password = $_POST['password'];
-    $address = $_POST['address'];
-    $joining = $_POST['joining'];
     
     $sql = "DELETE FROM customer_table WHERE 'Customer_ID='$id'";
 
