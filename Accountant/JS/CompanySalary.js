@@ -15,7 +15,11 @@ function salarytableview(eID, ename, edept, baseSalary, incPercent, ammount, dat
         tbl.appendChild(row);
 
         row.addEventListener("click", () => {
-        alert("Adding to alert");
+                
+                document.getElementById("empId").value = eID;
+                document.getElementById("increment").value = incPercent;
+
+                document.getElementById("PempId").value = eID;
 
         });
 

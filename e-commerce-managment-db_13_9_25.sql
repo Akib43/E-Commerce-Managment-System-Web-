@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2025 at 01:18 AM
+-- Generation Time: Sep 13, 2025 at 01:40 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,6 +39,13 @@ CREATE TABLE `company_expense` (
   `Expense_Received_By` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `company_expense`
+--
+
+INSERT INTO `company_expense` (`Expense_ID`, `Expense_Name`, `Expense_Ammount`, `Expense_Department_Name`, `Expense_Reason`, `Expense_Approved_Date`, `Expense_Approved_By`, `Expense_Received_Date`, `Expense_Received_By`) VALUES
+(1, 'Tissue', 120, 'HR', 'Stock', '2025-09-13', 'Samiul Bashar', '2025-09-20', 'Bobkes Boksi');
+
 -- --------------------------------------------------------
 
 --
@@ -57,6 +64,26 @@ CREATE TABLE `customer_order_table` (
   `Order_Date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `customer_order_table`
+--
+
+INSERT INTO `customer_order_table` (`Order_ID`, `Order_Price`, `Order_Location`, `Order_City`, `Order_Type`, `Order_Product_Category`, `Order_Status`, `Customer_ID`, `Order_Date`) VALUES
+(1, 1000, 'Ht', 'DH', 'SHIR', 'RR', 'R', 23, '2025-09-11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer_table`
+--
+
+CREATE TABLE `customer_table` (
+  `Customer_ID` int(11) NOT NULL,
+  `Customer_Name` int(11) NOT NULL,
+  `Customer_Email` int(11) NOT NULL,
+  `Customer_Phone` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 -- --------------------------------------------------------
 
 --
@@ -69,16 +96,17 @@ CREATE TABLE `employee_table` (
   `Employee_Department` varchar(50) DEFAULT NULL,
   `Employee_Base_Salary` decimal(10,2) NOT NULL,
   `Employee_Increment_Percent` decimal(5,2) NOT NULL,
-  `Employee_Final_Salary` decimal(10,2) GENERATED ALWAYS AS (`Employee_Base_Salary` + `Employee_Base_Salary` * `Employee_Increment_Percent` / 100) STORED
+  `Employee_Final_Salary` decimal(10,2) GENERATED ALWAYS AS (`Employee_Base_Salary` + `Employee_Base_Salary` * `Employee_Increment_Percent` / 100) STORED,
+  `Last_Paid` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `employee_table`
 --
 
-INSERT INTO `employee_table` (`Employee_ID`, `Employee_Name`, `Employee_Department`, `Employee_Base_Salary`, `Employee_Increment_Percent`) VALUES
-(1, 'Akib', 'Accountant', 30000.00, 10.00),
-(2, 'Sara', 'HR', 28000.00, 8.00);
+INSERT INTO `employee_table` (`Employee_ID`, `Employee_Name`, `Employee_Department`, `Employee_Base_Salary`, `Employee_Increment_Percent`, `Last_Paid`) VALUES
+(1, 'Akib', 'Accountant', 30000.00, 22.00, '2025-09-13'),
+(2, 'Sara', 'HR', 28000.00, 8.00, '2025-09-13');
 
 -- --------------------------------------------------------
 
@@ -98,6 +126,15 @@ CREATE TABLE `product_table` (
   `Product_Details_2` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `product_table`
+--
+
+INSERT INTO `product_table` (`Product_ID`, `Product_Name`, `Product_Category`, `Product_Type`, `Product_Price`, `Product_Available`, `Product_Stocked`, `Product_Details_1`, `Product_Details_2`) VALUES
+(1, 'Tissue', 'Home', 'Regular', 60, 20, 128, '', ''),
+(2, 'Sofa', 'Home Decoration', 'Furniture', 25000, 15, 20, '', ''),
+(3, 'Samsung Washing Machin', 'Home Applience', 'Washing Machin', 45000, 15, 20, '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -108,12 +145,27 @@ CREATE TABLE `refund_table` (
   `Refund_ID` int(11) NOT NULL,
   `Order_ID` int(11) NOT NULL,
   `Customer_ID` int(11) NOT NULL,
-  `Product_ID` int(11) NOT NULL,
-  `Product_Name` varchar(100) NOT NULL,
-  `Product_Quantity` int(11) NOT NULL,
-  `Product_Price` decimal(10,2) NOT NULL,
-  `Total_Amount` decimal(10,2) GENERATED ALWAYS AS (`Product_Quantity` * `Product_Price`) STORED
+  `Refund_Product_ID` int(11) NOT NULL,
+  `Refund_Product_Name` varchar(50) NOT NULL,
+  `Refund_Product_Quantity` decimal(10,0) NOT NULL,
+  `Refund_Ammount` decimal(10,0) NOT NULL,
+  `Refund_Reason` enum('Damaged Product','Wrong Product','Late Delivery','Other') NOT NULL,
+  `Refund_Status` enum('Pending','Approved','Refunded','') NOT NULL,
+  `Refund_Date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `refund_table`
+--
+
+INSERT INTO `refund_table` (`Refund_ID`, `Order_ID`, `Customer_ID`, `Refund_Product_ID`, `Refund_Product_Name`, `Refund_Product_Quantity`, `Refund_Ammount`, `Refund_Reason`, `Refund_Status`, `Refund_Date`) VALUES
+(1, 1, 0, 1, '', 3, 0, '', 'Pending', '2025-09-12'),
+(2, 1, 0, 1, '0', 3, 0, '', 'Approved', '2025-09-12'),
+(3, 1, 0, 1, '0', 3, 0, '', 'Pending', '2025-09-12'),
+(4, 1, 23, 1, 'Tissue', 1, 60, 'Damaged Product', 'Pending', '0000-00-00'),
+(5, 1, 23, 1, 'Tissue', 4, 240, 'Late Delivery', 'Pending', '2025-09-13'),
+(6, 1, 23, 1, 'Tissue', 1, 60, 'Wrong Product', 'Refunded', '2025-09-13'),
+(7, 1, 23, 1, 'Tissue', 1, 60, 'Late Delivery', 'Pending', '2025-09-13');
 
 --
 -- Indexes for dumped tables
@@ -157,13 +209,13 @@ ALTER TABLE `refund_table`
 -- AUTO_INCREMENT for table `company_expense`
 --
 ALTER TABLE `company_expense`
-  MODIFY `Expense_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Expense_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `customer_order_table`
 --
 ALTER TABLE `customer_order_table`
-  MODIFY `Order_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Order_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `employee_table`
@@ -175,13 +227,13 @@ ALTER TABLE `employee_table`
 -- AUTO_INCREMENT for table `product_table`
 --
 ALTER TABLE `product_table`
-  MODIFY `Product_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Product_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `refund_table`
 --
 ALTER TABLE `refund_table`
-  MODIFY `Refund_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Refund_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
