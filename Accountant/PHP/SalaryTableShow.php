@@ -9,7 +9,7 @@ if ($result->num_rows > 0) {
         echo "<script>
         salarytableview('".$row["Employee_ID"]. "','". $row["Employee_Name"]."' ,
                                 '". $row["Employee_Department"]."','". $row["Employee_Base_Salary"]."',
-                                '". $row["Employee_Increment_Percent"]. "','". $row["Employee_Final_Salary"]."','".$row["Last_Paid"]."');
+                                '". $row["Employee_Increment_Percent"]. "','". $row["Employee_Final_Salary"]."','".$row["Last_Paid"]."','".$row["Employee_Performence"]."');
                                 </script>";
     }
 } else {
