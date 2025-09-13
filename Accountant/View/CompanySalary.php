@@ -27,6 +27,7 @@
             
             <div class="tablebox">
                 <table id="SalaryTable">
+                    <h1>Company Salary</h1>
                     <tr>
                         <th>Employee ID</th>
                         <th>Employee Name</th>
@@ -44,10 +45,10 @@
                 <div class="frm">
                     <form  action="../PHP/SalaryUpdate.php" method="POST">
                         <h2>Update Salary</h2>
-                        <input type="text" id="empId" name="empId" placeholder="Employee ID"><br><br>
-                        <input type="number" id="increment" name="increment" placeholder="Increment"><br><br>
+                        <input type="text" id="empId" name="empId" placeholder="Employee ID" required><br><br>
+                        <input type="number" id="increment" name="increment" placeholder="Increment" required><br><br>
                         <label>Pay Date</label></br>
-                        <input type="date" name="payday" id="increment" ><br><br>
+                        <input type="date" name="payday" id="paydate" required><br><br>
                         <input type="submit" value="Update">
                     </form>
                 </div>
@@ -55,7 +56,7 @@
                 <div class="frm">
                     <form  action="../PHP/PaySalary.php" method="POST">
                         <h2>Pay Salary</h2>
-                        <input type="text" id="PempId" name="PempId" placeholder="Employee ID">
+                        <input type="text" id="PempId" name="PempId" placeholder="Employee ID" required>
                         <input type="submit" value="Update">
                     </form>
                 </div>
