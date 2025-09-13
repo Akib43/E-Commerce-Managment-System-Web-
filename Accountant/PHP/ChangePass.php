@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include 'ServerStart.php';
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -11,11 +12,11 @@
         if($newpass != $confirmpass) {
             echo "<script>alert('Pass Mismatch');</script>";
         } else {
-            $sql = "SELECT Employee_password FROM Employee_Table WHERE Employee_Id='$id'";
+            $sql = "SELECT Employee_Password FROM Employee_Table WHERE Employee_ID='$id'";
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
-            if($row['Employee_password'] == $currentpass) {
-                $sql1 = "UPDATE Employee_Table SET Employee_password='$newpass' WHERE Employee_Id='$id'";
+            if($row['Employee_Password'] == $currentpass) {
+                $sql1 = "UPDATE Employee_Table SET Employee_Password='$newpass' WHERE Employee_ID='$id'";
                 if($conn->query($sql1) == TRUE) {
                     header("Location: ../View/Profile.php");
                     echo "<script>alert(Password Changed);</script>";
