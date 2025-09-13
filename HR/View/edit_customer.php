@@ -38,7 +38,7 @@ include '../DB/add_hr.php';
                     <h3>Employee Information</h3>
                 </a>
 
-                <a href="edit_hr.php" class="active">
+                <a href="edit_hr.php">
                     <span class="material-symbols-outlined">person_add_disabled</span>
                     <h3>Add/Remove HR</h3>
                 </a>
@@ -53,7 +53,7 @@ include '../DB/add_hr.php';
                     <h3>Add/Remove Delivery Man</h3>
                 </a>
 
-                <a href="edit_customer.php">
+                <a href="edit_customer.php" class="active">
                     <span class="material-symbols-outlined">person_add_disabled</span>
                     <h3>Add/Remove Customer</h3>
                 </a>
@@ -86,7 +86,7 @@ include '../DB/add_hr.php';
         <main>
             <div class="center">
                 <div class="top">
-                    <h1>Add/Remove HR</h1>
+                    <h1>Add/Remove Customer</h1>
 
                 <!-- Order Summary DB -->
                  <br>
