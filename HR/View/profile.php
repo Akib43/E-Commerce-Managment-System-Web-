@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <title>ShopLio</title>
+    <link rel="stylesheet" href="../CSS/edit.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
@@ -19,43 +19,58 @@
 
             <!-- left panel option bar -->
             <div class="sidebar">
-                <a href="#">
+                <a href="dashboard.html">
                     <span class="material-symbols-outlined">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
 
-                <a href="#"  class="active">
+                <a href="profile.php" class="active">
                     <span class="material-symbols-outlined">person</span>
                     <h3>Profile</h3>
                 </a>
 
-                <a href="#">
+                <a href="employee.php">
                     <span class="material-symbols-outlined">article_person</span>
                     <h3>Employee Information</h3>
                 </a>
 
-                <a href="#">
+                <a href="edit_hr.php">
                     <span class="material-symbols-outlined">person_add_disabled</span>
-                    <h3>Add/Remove Employee</h3>
+                    <h3>Add/Remove HR</h3>
                 </a>
 
-                <a href="#">
+                <a href="edit_accountant.php">
+                    <span class="material-symbols-outlined">person_add_disabled</span>
+                    <h3>Add/Remove Accountant</h3>
+                </a>
+
+                <a href="edit_deliveryman.php">
+                    <span class="material-symbols-outlined">person_add_disabled</span>
+                    <h3>Add/Remove Delivery Man</h3>
+                </a>
+
+                <a href="edit_customer.php">
+                    <span class="material-symbols-outlined">person_add_disabled</span>
+                    <h3>Add/Remove Customer</h3>
+                </a>
+
+                <a href="edit_product.php">
                     <span class="material-symbols-outlined">assessment</span>
-                    <h3>Product Delivery Report</h3>
+                    <h3>Add/Remove Product</h3>
                 </a>
 
-                <a href="#">
+                <a href="leave_days.php">
                     <span class="material-symbols-outlined">event</span>
                     <h3>Leave Management</h3>
                     <span class="mgs_count">5</span>
                 </a>
 
-                <a href="#">
+                <a href="training.php">
                     <span class="material-symbols-outlined">cast_for_education</span>
                     <h3>Training & Development</h3>
                 </a>
 
-                <a href="#">
+                <a href="logout.php">
                     <span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
                 </a>
@@ -67,20 +82,12 @@
         <main>
             <div class="center">
                 <div class="top">
-                    <h1>Profile View</h1>
-                    
-                    <!-- Profile Information -->
-                    
-                </div>
+                    <h1>Personal Profile details</h1>
+
+                <!-- Order Summary DB -->
+
             </div>
         </main>
-
-        <!-- Top right -->
-
     </div>
-
-    <script src="../JS/script.js"></script>
-
 </body>
-
 </html>
