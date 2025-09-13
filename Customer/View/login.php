@@ -10,7 +10,7 @@ $activeForm = $_SESSION['active_form'] ?? 'login';
 
 session_unset();
 
-function ShowError($errors)
+function showError($errors)
 {
     return !empty($errors) ? "<p class='error-message'>$errors</p>" : '';
 }
@@ -28,7 +28,7 @@ function isActiveForm($formName, $activeForm)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <!-- custom css -->
-    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/Login.css">
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
@@ -43,7 +43,7 @@ function isActiveForm($formName, $activeForm)
                    <?= showError($errors['login']); ?>
                    <input type="email" name="email" placeholder="Email" required>
                    <input type="password" name="password" placeholder="Password" required>
-                   <button type="submit" name="login">Login</button> 
+                   <button type="submit" name="login">Login</button>
                    <p>Don't have an account? <a href="#" onclick="showForm('register-form')">Register</a></p>
                    
                </form>
@@ -57,7 +57,7 @@ function isActiveForm($formName, $activeForm)
                    <input type="text" name="name" placeholder="Name" required>
                    <input type="email" name="email" placeholder="Email" required>
                    <input type="password" name="password" placeholder="Password" required>
-                   <select name="role" id="" required>
+                   <select name="role" id="">
                       <option value="">--Select Role--</option>
                       <option value="user">user</option>
                       <option value="admin">admin</option>
@@ -69,7 +69,7 @@ function isActiveForm($formName, $activeForm)
                </form>
           </div>
      </div>
-    <script src="../JS/login.js"></script>
+    <script src="../JS/Login.js"></script>
 </body>
 
 </html>

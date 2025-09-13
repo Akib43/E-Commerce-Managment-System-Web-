@@ -8,28 +8,22 @@
 </head>
 <body>
     <form action="" id="show-info">
-        <!-- <tr>
-            <td>Name:</td><td><input type="text"></td>
-        </tr><br>
-        <tr>
-            <td>Email:</td><td><input type="email"></td>
-        </tr><br>
-        <tr>
-            <td>ID:</td><td><input type="text" value="" readonly></td>
-        </tr><br>
-        <tr>
-            <td>Phone Number:</td><td><input type="text"></td>
-        </tr> -->
+        
         
         <label for="" style="margin-right: 63px;">Name:</label>
-        <input type="text" id="name" value="mridul"><br>
+        <input type="text" id="name" value=""><br>
         <label for="" style="margin-right: 64px;">Email:</label>
         <input type="email" id="email"><br>
         <label for="" style="margin-right: 85px;">ID:</label>
-        <input type="text" id="id" value="1" readonly><br>
+        <input type="text" id="id" value="" readonly><br>
         <label for="" style="margin-right: 5px;">Phone Number:</label>
         <input type="text" id="phn-no"><br>
-        <button type="submit">Save Info</button>
+        <label for="" style="margin-right: 48px;">Address:</label>
+        <input type="text" id="address"><br>
+        <div class="btn">
+            <button type="submit" style="padding: 10px 120px; border-radius: 10px; background-color:blueviolet; color:#FFFFFF; font-size:larger;">Save Info</button>
+        </div>
+        
 
     </form>
     <?php

@@ -75,7 +75,7 @@
                     <h3>Training & Development</h3>
                 </a>
 
-                <a href="logout.php">
+                <a href="../../Customer/View/login.php">
                     <span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
                 </a>
@@ -89,16 +89,65 @@
                 <div class="top">
                     <h1>Personal Profile details</h1>
 
-                <div class="main-content">
-                    <!-- Order Summary DB -->
-                    <div class="tabel-box">
-                        <label id="">Name</label>
-                        <input type="text" name="name" id="name"readonly>
+                    <div class="main-content">
+                        <!-- Order Summary DB -->
+                        <form action="../DB/update-hr.php" method="POST">
+                            <table id="acc">
+                                <br>
+                                <h2>Hi, HR! Want to update your informations</h2>
+                                <thead class="form-style">
+                                    <tr>
+                                        <td><b>ID:</b></td>
+                                        <td><input type="number" name="id" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Name:</b></td>
+                                        <td><input type="text" name="name" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Email:</b></td>
+                                        <td><input type="email" name="email" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Contact Number:</b></td>
+                                        <td><input type="number" name="number" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Password:</b></td>
+                                        <td><input type="password" name="password" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Address:</b></td>
+                                        <td><input type="text" name="address" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Joining Date:</b></td>
+                                        <td><input type="date" name="joining" required></td>
+                                    </tr>
+                                </thead>
+                                <?php include '../DB/update-hr.php'; ?>
+                            </table>
+                            <button type="submit" class="btn">Update HR</button>
+                        </form>
 
-                    </div>
-                
-                    <div class="profile-photo">
-                        <img src="../Img/HR_logo.jpg">
+                        <div class="table-box">
+                            <h1><br>HR Information</h1>
+                            <table id="hr">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Number</th>
+                                    <th>Email</th>
+                                    <th>Password</th>
+                                    <th>Address</th>
+                                    <th>Joining Date</th>
+                                </tr>
+                                <?php include '../DB/show_hr.php' ?>
+                            </table>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="../Img/HR_logo.jpg">
+                        </div>
                     </div>
                 </div>
             </div>
