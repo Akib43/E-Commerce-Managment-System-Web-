@@ -1,4 +1,5 @@
 <?php
+
 include 'ServerStart.php';
 
 $sql = "SELECT * FROM employee_table";
