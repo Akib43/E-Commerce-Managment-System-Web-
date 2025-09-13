@@ -1,5 +1,5 @@
 
-            <nav class="navbar">
+            <!-- <nav class="navbar">
                 <div class="logo">DeliveryMan</div>
                 <ul class="nav-links">
                     <li><a href="../view/Oder_Status.php">Order Status</a></li>
@@ -12,7 +12,7 @@
                     <!-- <li><a href="../view/Login.html">Logout</a></li> -->
                     <br>
                     </ul>
-            </nav>
+            </nav> -->
 
 
 <!DOCTYPE html>
