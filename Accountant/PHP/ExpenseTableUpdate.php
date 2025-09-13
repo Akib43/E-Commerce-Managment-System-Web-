@@ -12,13 +12,11 @@
         $eapby = $_POST['approvedby'];
         $ercdate = $_POST['receiveddate'];
         $ercby = $_POST['receivedby'];
-        
-        echo $ename . $eprice . $edept . $ereason . $eapdate . $eapby . $ercdate .$ercby;
 
         $sql = "INSERT INTO company_expense  (Expense_Name, Expense_Ammount, Expense_Department_Name, Expense_Reason, Expense_Approved_Date, Expense_Approved_By, Expense_Received_Date, Expense_Received_By) VALUES ('$ename', '$eprice', '$edept', '$ereason', '$eapdate', '$eapby', '$ercdate', '$ercby')";
 
         if($conn -> query($sql) === TRUE){
-            echo "<script>alert('Updated');</script>";
+            header("Location:../View/CompanyExpense.php");
             include 'ExpenseTableShow.php';
         }
         else{
