@@ -21,7 +21,7 @@
             <a href="CompanyExpense.php">Expenses</a>
             <a href="CompanySalary.php">Company Salary</a>
             <a href="../PHP/EndSession.php">Logout</a>
-
+            <!-- Session End -->
         </div>
         
         <div class="pagecontainer">
