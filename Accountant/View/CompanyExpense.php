@@ -41,14 +41,6 @@
                     </tr>
                 </table>
                 <?php include '../PHP/ExpenseTableShow.php';?>
-                <?php include '../PHP/ExpenseTableShow.php';?>
-                <?php include '../PHP/ExpenseTableShow.php';?>
-                <?php include '../PHP/ExpenseTableShow.php';?>
-                <?php include '../PHP/ExpenseTableShow.php';?>
-                <?php include '../PHP/ExpenseTableShow.php';?>
-                <?php include '../PHP/ExpenseTableShow.php';?>
-                <?php include '../PHP/ExpenseTableShow.php';?>
-                <?php include '../PHP/ExpenseTableShow.php';?>
             </div>
             
 

@@ -1,7 +1,8 @@
 <?php
+    session_start();
     include 'ServerStart.php';
     
-    $id = $_COOKIE['id'];
+    $id = $_SESSION['id'];
     $name = $_SESSION['name'];
     $email = $_SESSION['email'];
     $phone = $_SESSION['phone'];

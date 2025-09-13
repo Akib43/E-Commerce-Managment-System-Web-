@@ -1,4 +1,4 @@
-function profileLoad(id, name, numb, email, dpt, jdate) {
+function profileLoad(id, name, email, numb,  dpt, jdate) {
     document.getElementById("id").innerHTML = id;
     document.getElementById("name").innerHTML = name;
     document.getElementById("number").innerHTML = numb;
