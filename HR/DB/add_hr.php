@@ -9,14 +9,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $address = $_POST['address'];
     $joining = $_POST['joining'];
 
-    $sql = "INSERT INTO HR (Name, Number, Email, Password, Address, Joining) VALUES ('$name', '$number', '$email', '$password', '$address', '$joining')";
+    $sql = "INSERT INTO Employee_Table (Employee_Name, Employee_Number, Employee_Email, Employee_Password, Employee_Address, Employee_Joining_Date, Employee_Department) VALUES ('$name', '$number', '$email', '$password', '$address', '$joining', 'HR')";
 
     if ($conn->query($sql) === FALSE) {
         echo "Failed: " . $conn->error;
     }
-    else{
-        echo "New record created successfully";
-    }
+    header("Location:../View/employee.php");
     $conn->close();
 }
 ?>
