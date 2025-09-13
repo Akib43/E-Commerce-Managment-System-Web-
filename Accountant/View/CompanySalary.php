@@ -45,10 +45,8 @@
                 <div class="frm">
                     <form  action="../PHP/SalaryUpdate.php" method="POST">
                         <h2>Update Salary</h2>
-                        <input type="text" id="empId" name="empId" placeholder="Employee ID" required><br><br>
-                        <input type="number" id="increment" name="increment" placeholder="Increment" required><br><br>
-                        <label>Pay Date</label></br>
-                        <input type="date" name="payday" id="paydate" required><br><br>
+                        <input type="text" id="empId" name="empId" placeholder="Employee ID" required>
+                        <input type="number" id="increment" name="increment" placeholder="Increment" required>
                         <input type="submit" value="Update">
                     </form>
                 </div>

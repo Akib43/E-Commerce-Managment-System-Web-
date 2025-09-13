@@ -117,7 +117,7 @@
                 <div class="valueinput">
                     <form action="../PHP/RefundUpdate.php" method="POST">
                         <h4>Update Refund Form</h4>
-                        <input type="text" name="refundid" placeholder="Enter Refund ID" required>
+                        <input type="text" name="refundid" id="refundid" placeholder="Enter Refund ID" required>
                         <select name="status" required>
                             <option value="" disabled selected>Change Status</option>
                             <option value="Pending">Pending</option>
