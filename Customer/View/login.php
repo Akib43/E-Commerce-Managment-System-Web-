@@ -56,7 +56,8 @@ function isActiveForm($formName, $activeForm)
                    <?= showError($errors['register']); ?>
                    <input type="text" name="name" placeholder="Name" required>
                    <input type="email" name="email" placeholder="Email" required>
-                   <input type="password" name="password" placeholder="password" required>
+                   <input type="password" name="password" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                   <!-- <input type="password" name="password" placeholder="password" required> -->
                    <!-- <select name="role" id=""> -->
                       <!-- <option value="">--Select Role--</option> -->
                       <!-- <option value="user">user</option> -->

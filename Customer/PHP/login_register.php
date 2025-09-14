@@ -15,9 +15,6 @@ if (isset($_POST['register'])) {
         $_SESSION['register_error'] = 'Email is already registered';
         $_SESSION['active_form'] = 'register';
 
-        if(preg_match("/^[a-zA-Z0-9._@!#$%&]+$/",$password) && strlen($password) >= 8){
-            echo 
-        }
     }
     }
      else {
