@@ -56,14 +56,14 @@ function isActiveForm($formName, $activeForm)
                    <?= showError($errors['register']); ?>
                    <input type="text" name="name" placeholder="Name" required>
                    <input type="email" name="email" placeholder="Email" required>
-                   <input type="password" name="password" placeholder="Password" required>
-                   <select name="role" id="">
-                      <option value="">--Select Role--</option>
-                      <option value="user">user</option>
-                      <option value="admin">admin</option>
-                      <option value="hr">hr</option>
-                      <option value="delivery man">delivery man</option>
-                   </select>
+                   <input type="password" name="password" placeholder="password" required>
+                   <!-- <select name="role" id=""> -->
+                      <!-- <option value="">--Select Role--</option> -->
+                      <!-- <option value="user">user</option> -->
+                      <!-- <option value="admin">admin</option> -->
+                      <!-- <option value="hr">hr</option> -->
+                      <!-- <option value="delivery man">delivery man</option> -->
+                   <!-- </select> -->
                    <button type="submit" name="register">Register</button>
                    <p>Already have an account? <a href="#" onclick="showForm('login-form')">Login</a></p>
                </form>

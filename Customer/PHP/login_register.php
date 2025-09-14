@@ -9,10 +9,16 @@ if (isset($_POST['register'])) {
     $password = $_POST['password'];
 
     // Check if email exists
+        
     $checkEmail = $conn->query("SELECT * FROM customer_table WHERE Customer_Email = '$email'");
     if ($checkEmail->num_rows > 0) {
         $_SESSION['register_error'] = 'Email is already registered';
         $_SESSION['active_form'] = 'register';
+
+        if(preg_match("/^[a-zA-Z0-9._@!#$%&]+$/",$password) && strlen($password) >= 8){
+            echo 
+        }
+    }
     }
      else {
         // Insert new user
@@ -25,7 +31,7 @@ if (isset($_POST['register'])) {
     session_unset();
     header("location:../View/login.php");
     exit();
-}
+
 
 // login
    if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -56,67 +62,6 @@ if (isset($_POST['register'])) {
         }
         
     }
-// session_start();
-// include 'config.php';
-
-// // REGISTER
-// if (isset($_POST['register'])) {
-//     $name = $_POST['name'];
-//     $email = $_POST['email'];
-//     $password = $_POST['password'];
-//     $role = $_POST['role'];
-
-//     // Check if email already exists
-//     $checkEmail = $conn->query("SELECT Customer_Email FROM customer_table WHERE Customer_Email = '$email'");
-
-//     if ($checkEmail->num_rows > 0) {
-//         $_SESSION['register_error'] = 'Email is already registered';
-//         $_SESSION['active_form'] = 'register';
-//     } else {
-//         $conn->query("INSERT INTO customer_table (Customer_Name, Customer_Email, Customer_Password, Customer_Role) 
-//                       VALUES ('$name', '$email', '$password', '$role')");
-//         $_SESSION['register_success'] = 'Registration successful! Please login.';
-//     }
-
-//     header("Location: ../View/login.php");
-//     exit();
-// }
-
-// // LOGIN
-// if (isset($_POST['login'])) {
-//     $email = $_POST['email'];
-//     $password = $_POST['password'];
-
-//     $result = $conn->query("SELECT * FROM customer_table WHERE Customer_Email = '$email'");
-
-//     if ($result->num_rows > 0) {
-//         $user = $result->fetch_assoc();
-
-//         if ($password === $row['Customer_Password']) {
-//             // Save info in session
-//             $_SESSION['id'] = $user['Customer_ID'];
-//             $_SESSION['name'] = $user['Customer_Name'];
-//             $_SESSION['email'] = $user['Customer_Email'];
-//             $_SESSION['role'] = $user['Customer_Role'];
-
-//             setcookie("id", $user['Customer_ID'], time() + 86400, "/");
-
-//             // Redirect by role
-//             if ($user['Customer_Role'] === 'admin') {
-//                 header("Location: ../View/admin.php");
-//             } elseif ($user['Customer_Role'] === 'user') {
-//                 header("Location: ../View/index.html");
-//             } elseif ($user['Customer_Role'] === 'hr') {
-//                 header("Location: ../View/hr.php");
-//             } else {
-//                 header("Location: ../View/delivery_man.php");
-
-//             }
-//         } else {
-//             echo "<script>alert('Email not found');</script>";
-//         }
-//     }
-
 
 else{
             $sql = "SELECT * FROM employee_table WHERE Employee_Email = '$mail'";
@@ -131,11 +76,12 @@ else{
                     $_SESSION['department'] = $row['Employee_Department'];
                     $_SESSION['joiningdate'] = $row['Employee_Joining_Date'];
 
-                    echo $_SESSION['department'] . $_SESSION['joiningdate'];
+                    // echo $_SESSION['department'] . $_SESSION['joiningdate'];
 
-                    // $password = $row['Customer_Password'];
-               
-
+                    //$password = $row['Employee_Password'];
+            //    
+                    // echo $password;
+                    // echo $row['Employee_Password'];
             if ($password === $row['Employee_Password']) {
                 if(preg_match("/^[a-zA-Z0-9._]+@(accountant\.com)$/",$mail)){
                     header("Location: ../../Accountant/View/AccountantDashboard.php");
@@ -146,17 +92,16 @@ else{
                 }else{
                     echo "<script>alert('Invalid email format');</script>";
                 }
+            }else{
+                $_SESSION['login_error'] = 'Incorrect email or password';
+                $_SESSION['active_form'] = 'login';
+                header("Location: ../View/login.php");
+exit();
             }
-        }
-        
+        }        
     }
 exit();
 
-    // Wrong login
-    $_SESSION['login_error'] = 'Incorrect email or password';
-    $_SESSION['active_form'] = 'login';
-    header("Location: ../View/login.php");
-    exit();
 
 }
    
