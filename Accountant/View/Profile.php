@@ -54,7 +54,7 @@
         </table>
         <?php include '../PHP/ProfileView.php'; ?>
 
-        <form action="../PHP/ChangePassword.php" method="POST">
+        <form action="../PHP/ChangePass.php" method="POST">
             <table>
                 <tr>
                     <td>
