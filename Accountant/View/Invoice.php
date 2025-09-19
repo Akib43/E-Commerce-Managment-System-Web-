@@ -3,7 +3,7 @@
 
     <head>
 
-        <title>Product Sales</title>
+        <title>Invoice</title>
         <script src="../JS/Invoice.js"></script>
         <link rel="Stylesheet" href="../CSS/Invoice.css">
 
@@ -88,9 +88,9 @@
                             <th>Product Name</th>
                             <th>Quantity</th>
                             <th>Refund Amount</th>
-                            <th>Refund Date</th>
                             <th>Refund Reason</th>
                             <th>Refund Status</th>
+                            <th>Refund Date</th>
                         </tr>
                     </table> 
                 </div>

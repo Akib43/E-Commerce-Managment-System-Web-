@@ -21,7 +21,7 @@ include 'ServerStart.php';
 
 $sql = "SELECT Employee_ID, Employee_Name, Employee_Department, Employee_Base_Salary, Employee_Increment_Percent, Employee_Final_Salary, Last_Paid , Employee_Performance FROM employee_table";
 $result = $conn->query($sql);
-if ($result->num_rows > 0) {
+if ($result -> num_rows >0) {
     while($row = $result->fetch_assoc()) {
         echo "<script>
         salarytableview('".$row["Employee_ID"]. "','". $row["Employee_Name"]."' ,

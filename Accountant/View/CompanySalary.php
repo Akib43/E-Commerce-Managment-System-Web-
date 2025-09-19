@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Product Sales</title>
+        <title>Company Salary</title>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="../JS/CompanySalary.js"></script>
         <link rel="stylesheet" href="../CSS/CompanySalary.css">

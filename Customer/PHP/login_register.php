@@ -147,18 +147,19 @@ else{
                     echo "<script>alert('Invalid email format');</script>";
                 }
             }
+            else{
+$_SESSION['login_error'] = 'Incorrect email or password';
+$_SESSION['active_form'] = 'login';
+header("Location: ../View/login.php");
+exit();
+            }
         }
         
     }
 exit();
 
     // Wrong login
-    $_SESSION['login_error'] = 'Incorrect email or password';
-    $_SESSION['active_form'] = 'login';
-    header("Location: ../View/login.php");
-    exit();
 
 }
    
 ?>
-

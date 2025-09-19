@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Product Sales</title>
+        <title>Orders Report</title>
         <script src="../JS/OrdersReport.js "></script>
         <link rel="Stylesheet" href="../CSS/OrdersReport.css">
 
